@@ -1,6 +1,6 @@
 # Progress Tracker — Voice Productivity Assistant
 
-Local-only tracker. No git commits/pushes happen until explicitly requested.
+Commit and push to origin/main as work progresses (repo is public: never commit .env, models, DBs).
 
 Legend: `[ ]` not started · `[~]` in progress · `[x]` done
 
@@ -336,6 +336,35 @@ Legend: `[ ]` not started · `[~]` in progress · `[x]` done
       NOT YET TESTED live: reminder-confirmation interrupt -> weather question
       (the Phase 9 demo scenario), weather-report interrupt, rapid successive
       interrupts, headphones.
+
+## Extra — Conversational memory (requested by user after live testing)
+Not in the original brief; added because live use showed "Can you tell that in
+short?" got "What do you need to know?" and a bare "Mumbai" after "Which city?"
+was routed to Q&A.
+- [x] src/router/router.py holds session state: last 8 chat messages (Q&A
+      gets them as Ollama chat history), last weather city, and an
+      awaiting-city flag (a short reply after "Which city?" is taken as the
+      city). route() only READS state; the pipeline calls remember() once the
+      user actually heard the reply, so an answer discarded by a barge-in
+      while thinking is never remembered.
+- [x] scripts/test_memory.py (7 checks, all pass): follow-up summarizes the
+      previous answer; bare city after a prompt; remembered city reused; new
+      explicit city overrides; discarded answer not remembered; a long new
+      request during awaiting-city is not hijacked.
+- [x] Reminder handler bugs found by these tests / a live transcript, fixed:
+        - dateparser cannot read "at 6 in the evening", "evening at 6" or a
+          bare "at 6" and silently substitutes the CURRENT CLOCK TIME, so the
+          reminder announced a time the user never said (a 2:21 AM result for
+          "6 in the evening"). Now rewritten to an explicit "6 pm" first
+          (bare hour: 1-6 -> pm, 7-11 -> am, stated as-is so the user can
+          correct it).
+        - Date with no time ("remind me tomorrow") was stamped with the
+          current time of day; now defaults to 9 AM and SAYS so
+          ("You didn't give a time, so I picked 9 AM.").
+        - Leading "Actually,/Also,/Okay so" no longer leaks into the task;
+          trailing "?", "next", "on", "by" etc. are stripped.
+- Limits: memory is per-session (lost on restart), Q&A-only history, no
+  entity resolution beyond the weather city.
 
 ## Phase 8 — Latency Measurement
 - [x] Log per-stage latency (STT, classification, handler, LLM gen, TTS)

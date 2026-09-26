@@ -53,6 +53,7 @@ class WeatherResult:
     ok: bool
     message: str
     needs_location: bool = False
+    location: str | None = None
 
 
 def extract_location(text: str) -> str | None:
@@ -128,7 +129,7 @@ def handle(text: str, default_location: str | None = None) -> WeatherResult:
     geo = geocode(location)
     if geo is None:
         return WeatherResult(
-            ok=False, message=f"I couldn't find a place called {location}."
+            ok=False, message=f"I couldn't find a place called {location}.", location=location
         )
     lat, lon, place = geo
 
@@ -137,7 +138,7 @@ def handle(text: str, default_location: str | None = None) -> WeatherResult:
     except requests.RequestException as e:
         return WeatherResult(ok=False, message=f"I couldn't reach the weather service: {e}")
 
-    return WeatherResult(ok=True, message=format_response(place, data))
+    return WeatherResult(ok=True, message=format_response(place, data), location=location)
 
 
 if __name__ == "__main__":

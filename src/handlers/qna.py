@@ -25,7 +25,9 @@ class QnAResult:
     message: str
 
 
-def handle(text: str) -> QnAResult:
+def handle(text: str, history: list[dict] | None = None) -> QnAResult:
+    """`history` is prior chat turns ({'role','content'} dicts) so follow-ups
+    like 'tell me that in short' have something to refer to."""
     try:
         resp = requests.post(
             OLLAMA_URL,
@@ -33,6 +35,7 @@ def handle(text: str) -> QnAResult:
                 "model": MODEL,
                 "messages": [
                     {"role": "system", "content": SYSTEM_PROMPT},
+                    *(history or []),
                     {"role": "user", "content": text},
                 ],
                 "stream": False,

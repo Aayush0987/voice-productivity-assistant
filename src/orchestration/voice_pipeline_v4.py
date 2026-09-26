@@ -94,6 +94,7 @@ def main():
         print(f"  [{r.intent} @ {r.confidence:.2f}, {r.latency_ms:.0f}ms] {r.message}")
 
         status, result = speak_with_barge_in(r.message)
+        router.remember(transcript, r)  # the user heard it (fully or partly)
         if status == "interrupted":
             pending_audio = result
         print()
