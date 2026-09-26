@@ -277,8 +277,27 @@ Legend: `[ ]` not started · `[~]` in progress · `[x]` done
       mic) materializes in practice.
 
 ## Phase 8 — Latency Measurement
-- [ ] Log per-stage latency (STT, classification, handler, LLM gen, TTS)
-- [ ] Compare reminder/weather path vs Q&A path latency
+- [x] Log per-stage latency (STT, classification, handler, LLM gen, TTS)
+      Router now returns classify_ms and handler_ms separately (for Q&A the
+      handler time IS the LLM generation). src/utils/latency.py appends JSONL
+      to logs/latency.jsonl. scripts/benchmark_latency.py runs offline (no mic):
+      macOS `say` audio -> Whisper -> router -> Piper synth of first sentence,
+      after a warm-up pass. Excludes fixed VAD silence wait (0.7s) and
+      playback duration, which are constants not compute.
+- [x] Compare reminder/weather path vs Q&A path latency
+      Median ms, n=4 per intent, M4 Pro, all 12 phrases routed correctly:
+        intent    STT  classify  handler  TTS(1st sent)  total
+        qna       326      20     1187        197        1730
+        reminder  376      18        3        119         515
+        weather   334      19     1546        103        2001
+      FINDING (contradicts the brief's assumption): reminder is ~3.4x faster
+      than Q&A as expected, but weather is SLOWER than Q&A (2.0s vs 1.7s)
+      because it makes two sequential network calls to Open-Meteo (geocode,
+      then forecast) — skipping the LLM does not make it fast. Caveats: Q&A
+      answers here were short (system prompt asks for 1-3 sentences) and the
+      LLM call is non-streaming, so time-to-first-audio grows with answer
+      length; small n. Possible improvements for README: cache geocoding
+      results, stream LLM tokens to TTS.
 
 ## Phase 9 — Full Integration Demo
 - [ ] Demo script covering all three intents

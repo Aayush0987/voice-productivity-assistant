@@ -25,6 +25,8 @@ class RouteResult:
     confidence: float
     message: str
     latency_ms: float
+    classify_ms: float = 0.0
+    handler_ms: float = 0.0
 
 
 class Router:
@@ -35,15 +37,18 @@ class Router:
         start = time.perf_counter()
         intent, probs = classify(text, self.tokenizer, self.model)
         confidence = probs[intent]
+        classified = time.perf_counter()
 
         result = HANDLERS[intent](text)
+        done = time.perf_counter()
 
-        latency_ms = (time.perf_counter() - start) * 1000
         return RouteResult(
             intent=intent,
             confidence=confidence,
             message=result.message,
-            latency_ms=latency_ms,
+            latency_ms=(done - start) * 1000,
+            classify_ms=(classified - start) * 1000,
+            handler_ms=(done - classified) * 1000,
         )
 
 
