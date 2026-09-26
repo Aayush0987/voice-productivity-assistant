@@ -28,7 +28,7 @@ class MicMonitor:
         self._thread.start()
 
     def stop(self):
-        """Stop if no interruption occurred (no-op once one has)."""
+        """Stop listening now. Call wait_for_capture() instead to keep an interrupting utterance."""
         self._stop_requested.set()
         if self._thread is not None:
             self._thread.join(timeout=2.0)
@@ -48,7 +48,7 @@ class MicMonitor:
                 samplerate=SAMPLE_RATE, channels=1, dtype="float32", blocksize=CHUNK_SAMPLES
             ) as stream:
                 while not engine.done:
-                    if not engine.triggered and self._stop_requested.is_set():
+                    if self._stop_requested.is_set():  # hard stop, even mid-capture: never hold the mic
                         break
                     chunk, _ = stream.read(CHUNK_SAMPLES)
                     engine.feed(chunk.flatten())

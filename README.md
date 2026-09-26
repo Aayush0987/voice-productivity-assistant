@@ -8,9 +8,11 @@ handles what you said instead.
 Built and measured on an Apple M4 Pro (24 GB). Everything below marked *measured* was
 observed on that machine; where something is not finished or not verified, it says so.
 
-> **Status:** working end to end by voice (verified live on real hardware). Barge-in is
-> verified for interrupting a Q&A answer and for interrupting while the assistant is still
-> thinking; the reminder-then-weather interruption and rapid double interruptions are not yet
+> **Status:** working end to end by voice (verified live on real hardware). Replies are now
+> streamed sentence by sentence (`voice_pipeline_v5`); that pipeline is verified with typed
+> input and real audio output, and its live spoken barge-in is not yet re-verified (the previous
+> non-streaming `v4` was verified live for interrupting a Q&A answer and for interrupting while
+> thinking). The reminder-then-weather interruption and rapid double interruptions are not yet
 > verified live. The demo GIF is not recorded yet (see [docs/DEMO_SCRIPT.md](docs/DEMO_SCRIPT.md)).
 
 ## Architecture
@@ -40,10 +42,10 @@ exactly what is being played and can tell the assistant's own voice apart from y
 | Turn-taking | Silero VAD | Waits ~0.7 s of silence after you stop |
 | STT | faster-whisper `base.en`, CPU int8 | |
 | Router | DistilBERT fine-tuned on 3 intents | See accuracy below |
-| Q&A | Llama 3.1 8B via Ollama | Kept resident (`keep_alive`), last 4 exchanges as context |
+| Q&A | Llama 3.1 8B via Ollama | Streamed and spoken sentence by sentence; kept resident (`keep_alive`); last 4 exchanges as context |
 | Reminders | `dateparser` + SQLite | Stores task and due time locally |
 | Weather | Open-Meteo geocoding + forecast | No API key |
-| TTS | Piper `en_US-lessac-medium` | Sentence-level streaming |
+| TTS | Piper `en_US-lessac-medium` | Each sentence is synthesized while the previous one plays |
 | Orchestration | **Hand-written** (threads + one duplex stream) | Pipecat was in the original plan and is **not used**; see Lessons |
 
 ## Intent classifier
@@ -76,6 +78,13 @@ Reminders are fastest, as expected: no LLM, no network. **Weather is slower than
 contradicts the assumption that skipping the LLM makes a path fast: it makes two sequential
 network calls (geocode, then forecast).
 
+**Streaming the reply.** The table's Q&A row is for a short answer generated in full. For longer
+answers the pipeline now streams: the LLM's tokens are cut into sentences as they arrive and
+each is synthesized and spoken while the model is still writing the next. Measured on a 4-sentence
+answer (machine under load, so absolute times are inflated, the ratio is the point): speech could
+start after **26.4 s** non-streamed versus **6.3 s** streamed (4.2x sooner), and time-to-first-word
+now depends on the first sentence, not the whole answer.
+
 Caveats: excludes the fixed ~0.7 s end-of-speech wait and audio playback time; n=4 per intent;
 Q&A answers were short and the LLM is not streamed, so a longer answer takes proportionally
 longer before speech starts. **These were measured on an idle machine.** A concurrent GPU
@@ -88,9 +97,10 @@ machine otherwise idle before the demo is recorded.
 The hardest part, and where most of the engineering went. Talking over the assistant is easy for
 a human and surprisingly hard for a laptop with no echo cancellation.
 
-**What it does:** while the assistant is thinking or speaking, it keeps listening. If you start
-talking, playback stops within a fraction of a second, the answer in flight is discarded (never
-spoken, never remembered), and the sentence you just said is already captured and handled next.
+**What it does:** while the assistant is thinking or speaking (including the gaps while it waits
+for the LLM's next sentence), it keeps listening. If you start talking, playback stops within a
+fraction of a second, the LLM request is **cancelled**, only what you actually heard is
+remembered, and the sentence you just said is already captured and handled next.
 
 **How it works:**
 
@@ -116,8 +126,6 @@ the assistant cut itself off in 1 of 10 messages.
   and the first ~0.8 s of each message is deaf while the echo level is estimated. Headphones remove
   the echo entirely and should make it reliable; real AEC (e.g. WebRTC) is the proper fix and was out
   of scope for a free, pure-Python stack.
-- **Interrupting while the LLM is generating** discards the answer but does not cancel the request;
-  Ollama finishes it in the background. Wasteful, not wrong.
 - **The classifier's 100% is optimistic** (synthetic data, see above).
 - **Location extraction is a regex** (capitalised words after in/for/at/near/of). Whisper can
   mis-hear unusual place names ("Dhanbad" came out as "Danabad", "Danbhad", …), and geocoding then
@@ -127,8 +135,9 @@ the assistant cut itself off in 1 of 10 messages.
 - **Reminder time parsing has limits.** A bare hour is assumed ("at 6" → 6 PM, "at 8" → 8 AM) and a
   date with no time defaults to 9 AM; the assistant says when it assumed. "Next Monday" is
   ambiguous when today is Sunday.
-- **Not streamed:** the LLM answer is generated in full before TTS starts, so long answers have a
-  long time-to-first-word.
+- **Sentence-level streaming has seams.** The LLM can be slower than speech, leaving a pause between
+  sentences; a sentence is only spoken once its end is unambiguous (a period followed by a lowercase
+  word, like "5 p.m. yesterday", is not treated as an end), which costs about one token of delay.
 - Tested only on macOS / Apple Silicon.
 
 ## Cost: $0, no payment method anywhere
@@ -160,12 +169,12 @@ python src/classifier/train.py
 # python src/classifier/generate_dataset.py
 
 python scripts/demo_preflight.py                      # checks everything below
-python src/orchestration/voice_pipeline_v4.py         # the full assistant
+python src/orchestration/voice_pipeline_v5.py         # the full assistant (streaming replies)
 ```
 
 `VAD_DEBUG=1` prints the barge-in detector's live numbers. Earlier stages are kept as separate
 scripts (`voice_pipeline_v1` fixed-window STT → `v2` VAD turn-taking → `v3` TTS → `v4` barge-in +
-memory) so each step can be run and compared.
+memory → `v5` streamed replies) so each step can be run and compared.
 
 ## Lessons learned
 
@@ -185,6 +194,9 @@ memory) so each step can be run and compared.
   kept causing the next. Recording real echo from the machine and grid-searching offline (with clicks
   and simulated users injected) found settings that held up, and revealed that sentence boundaries
   needed more caution than continuous speech.
+- **A discarded request is not free.** Measured: after abandoning a long non-streamed answer, the
+  next question took 57 s (Ollama was still finishing the old one) versus 1.1 s when the streamed
+  request was cancelled. Barge-in has to cancel work, not just ignore it.
 - **Measure before assuming.** "Skipping the LLM makes weather fast" was wrong. And an 18-second
   first answer turned out to be a cold model load plus a background training job, not the code.
 - **Hand-rolling the pipeline instead of using Pipecat** gave full control over the duplex stream and

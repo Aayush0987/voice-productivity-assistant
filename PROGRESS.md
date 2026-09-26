@@ -403,6 +403,39 @@ User's first Q&A answer took 18.4s vs 4.6s for the follow-up. Measured:
   record the demo only after the training job has finished, or numbers and
   the video will look artificially slow.
 
+### Streaming replies (LLM -> TTS), requested by user
+Fixes the README's "time-to-first-word grows with answer length" limitation.
+- [x] src/utils/sentences.py SentenceChunker: cuts streamed tokens into
+      sentences as they complete. Rule that mattered: a "." followed by a
+      LOWERCASE letter is not a sentence end ("5 p.m. yesterday", "U.S. is",
+      "Wait... what"); needs one char of lookahead. Abbreviation list alone
+      failed 3 of 11 cases. scripts/test_sentences.py: 11/11 incl. feeding 3
+      characters at a time like a real stream.
+- [x] src/handlers/qna.py LLMStream: Ollama stream=true, yields sentences,
+      cancel() closes the HTTP connection.
+- [x] Router.route_stream() + remember_spoken(): only what was actually
+      spoken is remembered (an answer cut off after 2 sentences is remembered
+      as those 2 sentences). test_memory.py still 7/7.
+- [x] src/orchestration/voice_pipeline_v5.py: producer thread (stream ->
+      sentences -> Piper synth) feeds the player, so sentence N+1 is written
+      and synthesized while N plays; barge-in listens through the gaps too.
+      v4 is kept for comparison.
+- MEASURED (machine under load from the user's training job, so absolute
+  times are inflated, the ratios are the point):
+    time to first speech: 26.4s non-streamed -> 6.3s streamed (4.2x).
+    cancel(): a short request right after cancelling a long stream took 1.1s;
+    the same request while an abandoned long answer was still running took
+    57.1s (51x). So in v4, interrupting a Q&A answer and asking something new
+    would have queued behind the abandoned generation. Streaming + cancel
+    fixes it; this also retires the "doesn't cancel the LLM" limitation.
+- Hardening: MicMonitor.stop() is now a hard stop even mid-capture (a
+  sentence arriving at the same instant the monitor triggered could leave a
+  thread holding the mic for up to 15s). When both happen, the user wins.
+- Verified: typed question -> real Ollama stream -> Piper -> real speakers,
+  3 sentences in order, no false interrupt, spoken text remembered.
+- NOT verified: spoken barge-in on v5 (user to test). Also removed a fake
+  {"live": true, stt_ms: 0} record my typed test wrote to logs/latency.jsonl.
+
 ## Phase 9 — Full Integration Demo
 - [x] Demo script covering all three intents
       docs/DEMO_SCRIPT.md: pre-flight steps, Part 1 (intents + memory, 6

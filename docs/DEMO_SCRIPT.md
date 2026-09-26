@@ -23,7 +23,7 @@ interrupting the assistant mid-sentence — including the scenario from the brie
 Run:
 
 ```
-cd "/Users/aayush/VOICE AI AGENT" && source venv/bin/activate && python src/orchestration/voice_pipeline_v4.py
+cd "/Users/aayush/VOICE AI AGENT" && source venv/bin/activate && python src/orchestration/voice_pipeline_v5.py
 ```
 
 Wait for `Listening...` before each line. Pause briefly after each sentence; it decides
@@ -51,7 +51,7 @@ is slower than you might expect (two network calls).
 1. Say: "Remind me to submit the report on Friday at noon."
 2. While it is speaking the confirmation, cut in firmly: "Actually, what's the weather in Tokyo?"
 3. Expected: playback stops within a fraction of a second, the terminal prints
-   `[barge-in] interrupted mid-speech — stopping playback`, your new question is routed
+   `[barge-in] interrupted mid-speech; stopped playback and cancelled the rest`, your new question is routed
    to weather and answered. The reminder is still saved (the confirmation was
    interrupted, the action was not undone).
 
@@ -65,14 +65,17 @@ is slower than you might expect (two network calls).
 **Scenario C: interrupt while it is still thinking**
 
 1. Ask a Q&A question, and immediately (before it starts speaking) ask something else.
-2. Expected: `[barge-in] interrupted while thinking — discarding in-flight response`.
-   The first answer is never spoken and is not added to the conversation memory.
+2. Expected: `[barge-in] interrupted while waiting for the reply; cancelled it`.
+   The first answer is never spoken, is not added to the conversation memory, and the LLM
+   request is cancelled so your next question is not stuck behind it.
 
 **Scenario D: rapid successive interruptions** — interrupt, then interrupt the
 answer to your interruption. It should stay stable and keep responding to the latest thing you said.
 
-Verified live so far: scenarios B and C, and the memory behaviour. **Not yet
-verified live: A and D.** Record what actually happens rather than the ideal.
+Verified live so far (on the earlier non-streaming `v4`): scenarios B and C and the memory
+behaviour. `v5` (streamed replies) has been exercised with typed input and real audio out but
+**not yet with spoken interruptions: re-verify B and C, and A and D are new.** Record what
+actually happens rather than the ideal.
 
 ## Exit
 
