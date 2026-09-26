@@ -10,6 +10,7 @@ import requests
 
 OLLAMA_URL = "http://localhost:11434/api/chat"
 MODEL = "llama3.1:8b"
+KEEP_ALIVE = "30m"  # default is 5m: an idle pause would unload the model and cost ~6s on the next question
 
 SYSTEM_PROMPT = (
     "You are a helpful voice assistant. Answer concisely and conversationally, "
@@ -23,6 +24,20 @@ SYSTEM_PROMPT = (
 class QnAResult:
     ok: bool
     message: str
+
+
+def warm_up() -> bool:
+    """Load the model into memory now, so the first real question is not a cold start."""
+    try:
+        requests.post(
+            OLLAMA_URL,
+            json={"model": MODEL, "messages": [{"role": "user", "content": "hi"}],
+                  "stream": False, "keep_alive": KEEP_ALIVE, "options": {"num_predict": 1}},
+            timeout=120,
+        ).raise_for_status()
+        return True
+    except requests.RequestException:
+        return False
 
 
 def handle(text: str, history: list[dict] | None = None) -> QnAResult:
@@ -39,6 +54,7 @@ def handle(text: str, history: list[dict] | None = None) -> QnAResult:
                     {"role": "user", "content": text},
                 ],
                 "stream": False,
+                "keep_alive": KEEP_ALIVE,
             },
             timeout=60,
         )

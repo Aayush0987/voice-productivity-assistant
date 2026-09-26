@@ -13,6 +13,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
+from src.handlers import qna
 from src.router.router import Router
 from src.stt.whisper_stt import transcribe_array
 from src.tts.piper_tts import speak_streaming_duplex
@@ -58,6 +59,9 @@ def speak_with_barge_in(message: str):
 
 def main():
     router = Router()
+    print("Loading the language model...", flush=True)
+    if not qna.warm_up():
+        print("  (could not reach Ollama; Q&A will fail until `ollama serve` is running)")
     print("Voice pipeline (Phase 7, barge-in enabled). Press Ctrl+C to exit.\n")
 
     pending_audio = None

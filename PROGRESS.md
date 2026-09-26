@@ -389,6 +389,20 @@ was routed to Q&A.
       length; small n. Possible improvements for README: cache geocoding
       results, stream LLM tokens to TTS.
 
+### Latency investigation after live memory test (2026-09-27)
+User's first Q&A answer took 18.4s vs 4.6s for the follow-up. Measured:
+- Cold start: Ollama unloads the model after 5 idle minutes; reloading cost
+  ~6s. FIXED: qna.warm_up() at pipeline start + keep_alive="30m" (first
+  question after warm-up 2.2s; model shows "29 minutes from now" in ollama ps).
+- Generation was only 5.1 tok/s (100% GPU, so not a CPU fallback) with 11.4GB
+  of 12GB swap in use. Cause: the user's Project #4 `mlx_lm lora --train`
+  fine-tuning job was running on the same GPU/unified memory. Not a bug in
+  this project; NOT touched.
+- IMPORTANT for README/demo: the Phase 8 latency table (Q&A handler 1.2s) was
+  measured on an uncontended machine. Re-measure Q&A/weather latency and
+  record the demo only after the training job has finished, or numbers and
+  the video will look artificially slow.
+
 ## Phase 9 — Full Integration Demo
 - [ ] Demo script covering all three intents
 - [ ] Barge-in demo (interrupt reminder confirmation to ask weather)
