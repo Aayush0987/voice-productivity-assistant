@@ -1,0 +1,410 @@
+[
+  {
+    "text": "What\u2019s the forecast for my current location?",
+    "label": "weather"
+  },
+  {
+    "text": "How's the weather for the weekend in Miami?",
+    "label": "weather"
+  },
+  {
+    "text": "Set a reminder for yoga class tomorrow evening",
+    "label": "reminder"
+  },
+  {
+    "text": "Add a task to water the plants every morning at 8\u202fam",
+    "label": "reminder"
+  },
+  {
+    "text": "Why do we get brain freeze when eating ice cream too fast?",
+    "label": "qna"
+  },
+  {
+    "text": "Should I invest in index funds or individual stocks right now?",
+    "label": "qna"
+  },
+  {
+    "text": "Remind me to bring the documents to the meeting today at 3pm",
+    "label": "reminder"
+  },
+  {
+    "text": "Is it going to be rainy in the afternoon?",
+    "label": "weather"
+  },
+  {
+    "text": "What's the high temperature tomorrow in Boston?",
+    "label": "weather"
+  },
+  {
+    "text": "hey, you there",
+    "label": "qna"
+  },
+  {
+    "text": "What's the weather forecast for the weekend?",
+    "label": "weather"
+  },
+  {
+    "text": "Is there any chance of thunderstorms this afternoon?",
+    "label": "weather"
+  },
+  {
+    "text": "I need a reminder to book flight tickets next month",
+    "label": "reminder"
+  },
+  {
+    "text": "Define 'serendipity' for me.",
+    "label": "qna"
+  },
+  {
+    "text": "Make a note to check the car oil change in two weeks",
+    "label": "reminder"
+  },
+  {
+    "text": "Is it snowing in Denver right now?",
+    "label": "weather"
+  },
+  {
+    "text": "Is there any hail expected today?",
+    "label": "weather"
+  },
+  {
+    "text": "What's the weather outlook for the next three days?",
+    "label": "weather"
+  },
+  {
+    "text": "Can you check if it's raining in Seattle?",
+    "label": "weather"
+  },
+  {
+    "text": "what's happening",
+    "label": "qna"
+  },
+  {
+    "text": "Remind me to call the dentist next Tuesday morning",
+    "label": "reminder"
+  },
+  {
+    "text": "How far is the moon from Earth?",
+    "label": "qna"
+  },
+  {
+    "text": "What are the health benefits of a Mediterranean diet?",
+    "label": "qna"
+  },
+  {
+    "text": "What's the current stock price of Apple?",
+    "label": "qna"
+  },
+  {
+    "text": "Do we have any chance of rain today?",
+    "label": "weather"
+  },
+  {
+    "text": "What does the word 'serendipity' actually mean?",
+    "label": "qna"
+  },
+  {
+    "text": "Is it windy in Chicago today?",
+    "label": "weather"
+  },
+  {
+    "text": "Could you break down the plot of *The Great Gatsby* for me?",
+    "label": "qna"
+  },
+  {
+    "text": "Do I need an umbrella this afternoon?",
+    "label": "weather"
+  },
+  {
+    "text": "What are the main causes of the French Revolution?",
+    "label": "qna"
+  },
+  {
+    "text": "Make sure I remember to lock the doors at night",
+    "label": "reminder"
+  },
+  {
+    "text": "What's the humidity level today?",
+    "label": "weather"
+  },
+  {
+    "text": "What\u2019s the forecast for New York City today?",
+    "label": "weather"
+  },
+  {
+    "text": "Give me an overview of the current situation in the Israeli\u2011Palestinian conflict.",
+    "label": "qna"
+  },
+  {
+    "text": "Set a reminder to check the car oil in two weeks",
+    "label": "reminder"
+  },
+  {
+    "text": "Add a reminder for the conference call at 11am on Thursday",
+    "label": "reminder"
+  },
+  {
+    "text": "Is it windy outside?",
+    "label": "weather"
+  },
+  {
+    "text": "Set a reminder to take out the trash tonight",
+    "label": "reminder"
+  },
+  {
+    "text": "What's the difference between a virus and a bacteria?",
+    "label": "qna"
+  },
+  {
+    "text": "Don't let me forget to wish dad happy birthday on Sunday",
+    "label": "reminder"
+  },
+  {
+    "text": "Is it better to invest in stocks or bonds right now?",
+    "label": "qna"
+  },
+  {
+    "text": "What's the capital city of Mongolia?",
+    "label": "qna"
+  },
+  {
+    "text": "Tell me if it will rain tomorrow.",
+    "label": "weather"
+  },
+  {
+    "text": "What\u2019s the forecast for my location tomorrow morning?",
+    "label": "weather"
+  },
+  {
+    "text": "Do I need an umbrella tomorrow morning?",
+    "label": "weather"
+  },
+  {
+    "text": "What's the chance of rain today?",
+    "label": "weather"
+  },
+  {
+    "text": "I need a reminder to refill the water filter next week",
+    "label": "reminder"
+  },
+  {
+    "text": "Schedule a reminder for the movie premiere on the 15th at 6pm",
+    "label": "reminder"
+  },
+  {
+    "text": "What\u2019s the current status of the Mars rover Perseverance\u2019s mission?",
+    "label": "qna"
+  },
+  {
+    "text": "Is it going to be humid today?",
+    "label": "weather"
+  },
+  {
+    "text": "Add a reminder for the gym session tomorrow at 6pm",
+    "label": "reminder"
+  },
+  {
+    "text": "What is the capital of Iceland?",
+    "label": "qna"
+  },
+  {
+    "text": "Do you think electric cars will replace gasoline ones by 2030?",
+    "label": "qna"
+  },
+  {
+    "text": "What's the difference between a meteor and a comet?",
+    "label": "qna"
+  },
+  {
+    "text": "Is it better to read books in print or on a tablet?",
+    "label": "qna"
+  },
+  {
+    "text": "Tell me to schedule a dentist cleaning in three months",
+    "label": "reminder"
+  },
+  {
+    "text": "Are there any weather alerts for Los Angeles?",
+    "label": "weather"
+  },
+  {
+    "text": "Remind me to post the photos from the hike next Saturday",
+    "label": "reminder"
+  },
+  {
+    "text": "What\u2019s the weather outlook for New York City this Friday?",
+    "label": "weather"
+  },
+  {
+    "text": "Will the temperature drop below freezing this evening?",
+    "label": "weather"
+  },
+  {
+    "text": "What's the significance of the Magna Carta?",
+    "label": "qna"
+  },
+  {
+    "text": "Why do we dream, according to current research?",
+    "label": "qna"
+  },
+  {
+    "text": "Will it rain tomorrow in my area?",
+    "label": "weather"
+  },
+  {
+    "text": "Remind me to send the report by the end of the day",
+    "label": "reminder"
+  },
+  {
+    "text": "What's the recipe for classic guacamole?",
+    "label": "qna"
+  },
+  {
+    "text": "Don't forget to lock the front door at night.",
+    "label": "reminder"
+  },
+  {
+    "text": "Is it freezing outside?",
+    "label": "weather"
+  },
+  {
+    "text": "What\u2019s the weather outlook for the weekend in Los Angeles?",
+    "label": "weather"
+  },
+  {
+    "text": "Set a reminder for the team meeting tomorrow at 9am.",
+    "label": "reminder"
+  },
+  {
+    "text": "Don't forget to book the restaurant reservation for Friday night",
+    "label": "reminder"
+  },
+  {
+    "text": "Can you list the main ingredients in a classic Margherita pizza?",
+    "label": "qna"
+  },
+  {
+    "text": "Set a reminder for the flight departure on Saturday morning",
+    "label": "reminder"
+  },
+  {
+    "text": "Remind me to call John after lunch",
+    "label": "reminder"
+  },
+  {
+    "text": "What\u2019s the precipitation forecast for my area?",
+    "label": "weather"
+  },
+  {
+    "text": "Hey, what's the capital of Mongolia?",
+    "label": "qna"
+  },
+  {
+    "text": "What are the health benefits of drinking green tea?",
+    "label": "qna"
+  },
+  {
+    "text": "Add a task to schedule my dentist cleaning next month",
+    "label": "reminder"
+  },
+  {
+    "text": "Tell me to update the budget spreadsheet by next Wednesday",
+    "label": "reminder"
+  },
+  {
+    "text": "Remind me to water the cactus when I get back from work",
+    "label": "reminder"
+  },
+  {
+    "text": "Which movie won the Oscar for Best Picture in 1994?",
+    "label": "qna"
+  },
+  {
+    "text": "How hot will it get today?",
+    "label": "weather"
+  },
+  {
+    "text": "Tell me the temperature for New York City.",
+    "label": "weather"
+  },
+  {
+    "text": "Do you think streaming services will replace traditional movies in theaters?",
+    "label": "qna"
+  },
+  {
+    "text": "Can you give me a quick tip for improving my sleep?",
+    "label": "qna"
+  },
+  {
+    "text": "What does the word serendipity mean?",
+    "label": "qna"
+  },
+  {
+    "text": "Will there be thunderstorms later today?",
+    "label": "weather"
+  },
+  {
+    "text": "Is it better to read books on a Kindle or a paper copy?",
+    "label": "qna"
+  },
+  {
+    "text": "Hey assistant, remind me to send the email in 20 minutes",
+    "label": "reminder"
+  },
+  {
+    "text": "Remind me to take out the trash in 20 minutes",
+    "label": "reminder"
+  },
+  {
+    "text": "Schedule a reminder to back up my laptop tonight at 10pm",
+    "label": "reminder"
+  },
+  {
+    "text": "Give me a quick summary of the French Revolution.",
+    "label": "qna"
+  },
+  {
+    "text": "Forecast for New York tomorrow?",
+    "label": "weather"
+  },
+  {
+    "text": "Is it raining right now where I am?",
+    "label": "weather"
+  },
+  {
+    "text": "Add a reminder to call the plumber next Tuesday afternoon",
+    "label": "reminder"
+  },
+  {
+    "text": "Give me the formula for the area of a regular hexagon.",
+    "label": "qna"
+  },
+  {
+    "text": "Do you think pineapple belongs on pizza?",
+    "label": "qna"
+  },
+  {
+    "text": "Set a reminder for the team meeting next Monday morning",
+    "label": "reminder"
+  },
+  {
+    "text": "Can you set a reminder for the team meeting next Wednesday at 2pm",
+    "label": "reminder"
+  },
+  {
+    "text": "Explain the theory of relativity in simple terms.",
+    "label": "qna"
+  },
+  {
+    "text": "Explain the process of photosynthesis in simple terms.",
+    "label": "qna"
+  },
+  {
+    "text": "Create a task to review the contract on Monday morning",
+    "label": "reminder"
+  },
+  {
+    "text": "Set a reminder to pick up dry cleaning in two days",
+    "label": "reminder"
+  }
+]

@@ -1,0 +1,2314 @@
+[
+  {
+    "text": "Add a reminder to call the bank tomorrow morning",
+    "label": "reminder"
+  },
+  {
+    "text": "How do I make a perfect cup of French press coffee?",
+    "label": "qna"
+  },
+  {
+    "text": "What's the derivative of x^3 minus 2x?",
+    "label": "qna"
+  },
+  {
+    "text": "What's the best way to improve my public speaking skills?",
+    "label": "qna"
+  },
+  {
+    "text": "What's the forecast for my current location?",
+    "label": "weather"
+  },
+  {
+    "text": "Set a reminder for my dentist appointment at 10\u202fam on Thursday",
+    "label": "reminder"
+  },
+  {
+    "text": "Who won the Best Picture Oscar in 2022?",
+    "label": "qna"
+  },
+  {
+    "text": "Give me the forecast for next Friday in Chicago.",
+    "label": "weather"
+  },
+  {
+    "text": "How do I tie a bow tie?",
+    "label": "qna"
+  },
+  {
+    "text": "Is it true that humans share 99% of DNA with bananas?",
+    "label": "qna"
+  },
+  {
+    "text": "Can you tell me the latest breakthrough in renewable energy?",
+    "label": "qna"
+  },
+  {
+    "text": "Don't forget to book the flight for next weekend",
+    "label": "reminder"
+  },
+  {
+    "text": "Set a reminder for the meeting on Thursday at 2\u202fpm",
+    "label": "reminder"
+  },
+  {
+    "text": "What's the weather outlook for next week?",
+    "label": "weather"
+  },
+  {
+    "text": "Do you think electric cars are better for the environment?",
+    "label": "qna"
+  },
+  {
+    "text": "How do I properly brew a pour\u2011over coffee?",
+    "label": "qna"
+  },
+  {
+    "text": "What's the significance of the number zero in mathematics?",
+    "label": "qna"
+  },
+  {
+    "text": "What's the best method to brew a pour\u2011over coffee?",
+    "label": "qna"
+  },
+  {
+    "text": "Is it foggy outside?",
+    "label": "weather"
+  },
+  {
+    "text": "Tell me the weather for Paris tomorrow.",
+    "label": "weather"
+  },
+  {
+    "text": "What's the formula for calculating the area of a regular hexagon?",
+    "label": "qna"
+  },
+  {
+    "text": "Can you recommend a classic movie for a Friday night?",
+    "label": "qna"
+  },
+  {
+    "text": "What's the best way to start learning Python?",
+    "label": "qna"
+  },
+  {
+    "text": "What's the significance of the 1969 moon landing?",
+    "label": "qna"
+  },
+  {
+    "text": "Set a reminder for lunch with Sarah at noon.",
+    "label": "reminder"
+  },
+  {
+    "text": "How's the temperature in New York right now?",
+    "label": "weather"
+  },
+  {
+    "text": "Remind me to stretch in 30 minutes",
+    "label": "reminder"
+  },
+  {
+    "text": "Don't forget to wish Mom happy birthday on July\u202f4th",
+    "label": "reminder"
+  },
+  {
+    "text": "What's the difference between a comet and an asteroid?",
+    "label": "qna"
+  },
+  {
+    "text": "What will the high be today in Seattle?",
+    "label": "weather"
+  },
+  {
+    "text": "How windy will it be this afternoon?",
+    "label": "weather"
+  },
+  {
+    "text": "Tell me if it's snowing in Denver.",
+    "label": "weather"
+  },
+  {
+    "text": "Do I need an umbrella right now where I am?",
+    "label": "weather"
+  },
+  {
+    "text": "Um, how do you solve a quadratic equation?",
+    "label": "qna"
+  },
+  {
+    "text": "Give me the forecast for this afternoon.",
+    "label": "weather"
+  },
+  {
+    "text": "Add a task: clean the garage next Saturday",
+    "label": "reminder"
+  },
+  {
+    "text": "What happened during the fall of the Berlin Wall?",
+    "label": "qna"
+  },
+  {
+    "text": "How windy will it be later today?",
+    "label": "weather"
+  },
+  {
+    "text": "hiya",
+    "label": "qna"
+  },
+  {
+    "text": "What's the weather like in London right now?",
+    "label": "weather"
+  },
+  {
+    "text": "Do I need a raincoat this afternoon?",
+    "label": "weather"
+  },
+  {
+    "text": "Tell me who won the Nobel Peace Prize in 2023 and why.",
+    "label": "qna"
+  },
+  {
+    "text": "Explain the Pythagorean theorem in simple terms.",
+    "label": "qna"
+  },
+  {
+    "text": "Set a reminder for the dentist appointment next Thursday morning",
+    "label": "reminder"
+  },
+  {
+    "text": "How many languages are spoken worldwide?",
+    "label": "qna"
+  },
+  {
+    "text": "Don't let me forget to water the plants in 20 minutes.",
+    "label": "reminder"
+  },
+  {
+    "text": "Set a reminder for the concert on Saturday night",
+    "label": "reminder"
+  },
+  {
+    "text": "Set a reminder to buy groceries on Saturday",
+    "label": "reminder"
+  },
+  {
+    "text": "Don't let me forget to take my medication in 30 minutes",
+    "label": "reminder"
+  },
+  {
+    "text": "Will it snow this weekend in Denver?",
+    "label": "weather"
+  },
+  {
+    "text": "Tell me the forecast for Paris.",
+    "label": "weather"
+  },
+  {
+    "text": "Will there be a heatwave this weekend?",
+    "label": "weather"
+  },
+  {
+    "text": "Define 'cognitive bias' for me.",
+    "label": "qna"
+  },
+  {
+    "text": "Tell me the temperature outside.",
+    "label": "weather"
+  },
+  {
+    "text": "Make a note to email the client by end of day",
+    "label": "reminder"
+  },
+  {
+    "text": "Hey, remind me to water the plants every morning at 8am",
+    "label": "reminder"
+  },
+  {
+    "text": "Show me the weather for Tokyo.",
+    "label": "weather"
+  },
+  {
+    "text": "How's the weather in Paris today?",
+    "label": "weather"
+  },
+  {
+    "text": "What's the high temperature today?",
+    "label": "weather"
+  },
+  {
+    "text": "Remind me to book flight tickets next week",
+    "label": "reminder"
+  },
+  {
+    "text": "Add a reminder to schedule a car service next month",
+    "label": "reminder"
+  },
+  {
+    "text": "Give me a brief history of the Silk Road.",
+    "label": "qna"
+  },
+  {
+    "text": "What is the high temperature for tomorrow?",
+    "label": "weather"
+  },
+  {
+    "text": "Hey, uh, what's the difference between a simile and a metaphor?",
+    "label": "qna"
+  },
+  {
+    "text": "Who wrote the novel 'One Hundred Years of Solitude'?",
+    "label": "qna"
+  },
+  {
+    "text": "What's the current exchange rate between USD and EUR?",
+    "label": "qna"
+  },
+  {
+    "text": "Add a task: review the budget spreadsheet tomorrow afternoon",
+    "label": "reminder"
+  },
+  {
+    "text": "What was the significance of the fall of the Berlin Wall?",
+    "label": "qna"
+  },
+  {
+    "text": "Please remind me to water the succulents in two days",
+    "label": "reminder"
+  },
+  {
+    "text": "Set a reminder to call John next Friday",
+    "label": "reminder"
+  },
+  {
+    "text": "Don't forget to send the thank\u2011you note after the interview",
+    "label": "reminder"
+  },
+  {
+    "text": "Please remind me to take my medication every morning",
+    "label": "reminder"
+  },
+  {
+    "text": "Could you list five countries that use the Euro?",
+    "label": "qna"
+  },
+  {
+    "text": "What's the current Nobel Peace Prize winner's name?",
+    "label": "qna"
+  },
+  {
+    "text": "Add a todo: call the bank next week.",
+    "label": "reminder"
+  },
+  {
+    "text": "Are there any weather alerts for my area?",
+    "label": "weather"
+  },
+  {
+    "text": "Tell me the high temperature for tomorrow.",
+    "label": "weather"
+  },
+  {
+    "text": "Calculate the derivative of x^3 - 5x + 2.",
+    "label": "qna"
+  },
+  {
+    "text": "Tell me a fun fact about the Great Wall of China.",
+    "label": "qna"
+  },
+  {
+    "text": "Tell me a joke about scientists.",
+    "label": "qna"
+  },
+  {
+    "text": "What are the main causes of the 2023 global supply chain crisis?",
+    "label": "qna"
+  },
+  {
+    "text": "Give me the forecast for this weekend.",
+    "label": "weather"
+  },
+  {
+    "text": "What are the main differences between a hurricane and a tornado?",
+    "label": "qna"
+  },
+  {
+    "text": "Do we have any severe weather alerts right now?",
+    "label": "weather"
+  },
+  {
+    "text": "Will it be sunny on Sunday?",
+    "label": "weather"
+  },
+  {
+    "text": "Tell me to pick up dry cleaning on Monday.",
+    "label": "reminder"
+  },
+  {
+    "text": "Add a task to schedule dentist cleaning next year.",
+    "label": "reminder"
+  },
+  {
+    "text": "In your view, which is the most influential invention of the 20th century?",
+    "label": "qna"
+  },
+  {
+    "text": "Is it windy right now?",
+    "label": "weather"
+  },
+  {
+    "text": "Set a reminder to call Mom without specifying a time",
+    "label": "reminder"
+  },
+  {
+    "text": "What's the weather in London?",
+    "label": "weather"
+  },
+  {
+    "text": "Who was the first woman to win a Fields Medal?",
+    "label": "qna"
+  },
+  {
+    "text": "Create a reminder for yoga class every morning at 7am",
+    "label": "reminder"
+  },
+  {
+    "text": "Tell me the weather for today without mentioning a city.",
+    "label": "weather"
+  },
+  {
+    "text": "Tell me the wind speed right now.",
+    "label": "weather"
+  },
+  {
+    "text": "Remind me to stretch every morning",
+    "label": "reminder"
+  },
+  {
+    "text": "Is it going to be hot this weekend?",
+    "label": "weather"
+  },
+  {
+    "text": "Set a reminder for the dentist appointment next Tuesday",
+    "label": "reminder"
+  },
+  {
+    "text": "What's the latest development on the space telescope mission?",
+    "label": "qna"
+  },
+  {
+    "text": "What's the significance of the Battle of Hastings?",
+    "label": "qna"
+  },
+  {
+    "text": "Provide the hourly forecast for the next 12 hours.",
+    "label": "weather"
+  },
+  {
+    "text": "Explain why the Great Pacific Garbage Patch is a concern.",
+    "label": "qna"
+  },
+  {
+    "text": "How's the temperature in Chicago right now?",
+    "label": "weather"
+  },
+  {
+    "text": "Don't forget to pack lunch for tomorrow's hike",
+    "label": "reminder"
+  },
+  {
+    "text": "What's the value of pi to 10 decimal places?",
+    "label": "qna"
+  },
+  {
+    "text": "What are the main causes of the current global chip shortage?",
+    "label": "qna"
+  },
+  {
+    "text": "Add a reminder: take the trash out tonight",
+    "label": "reminder"
+  },
+  {
+    "text": "Hey, any tips on staying focused while studying?",
+    "label": "qna"
+  },
+  {
+    "text": "Why do cats purr?",
+    "label": "qna"
+  },
+  {
+    "text": "Don't let me forget to pick up the dry cleaning tomorrow morning",
+    "label": "reminder"
+  },
+  {
+    "text": "what's going on",
+    "label": "qna"
+  },
+  {
+    "text": "What's the forecast for tomorrow in London?",
+    "label": "weather"
+  },
+  {
+    "text": "I'm curious, how does photosynthesis actually convert sunlight into chemical energy?",
+    "label": "qna"
+  },
+  {
+    "text": "Add a reminder to pick up laundry on Saturday",
+    "label": "reminder"
+  },
+  {
+    "text": "Remind me to back up my laptop tonight",
+    "label": "reminder"
+  },
+  {
+    "text": "Will it be sunny this weekend in Miami?",
+    "label": "weather"
+  },
+  {
+    "text": "What are some effective ways to reduce household waste?",
+    "label": "qna"
+  },
+  {
+    "text": "Remind me to pack lunch for tomorrow",
+    "label": "reminder"
+  },
+  {
+    "text": "Hey, what's the latest news on the Mars rover mission?",
+    "label": "qna"
+  },
+  {
+    "text": "Remind me to submit the report by Friday.",
+    "label": "reminder"
+  },
+  {
+    "text": "Is snow predicted for the mountains tomorrow?",
+    "label": "weather"
+  },
+  {
+    "text": "Define the term photosynthesis.",
+    "label": "qna"
+  },
+  {
+    "text": "Will it be sunny on Saturday?",
+    "label": "weather"
+  },
+  {
+    "text": "Um, can you explain how photosynthesis works?",
+    "label": "qna"
+  },
+  {
+    "text": "Is there a weather warning for my area?",
+    "label": "weather"
+  },
+  {
+    "text": "Is it better to bike or walk for cardio?",
+    "label": "qna"
+  },
+  {
+    "text": "What happened in the Suez Canal incident of 2021?",
+    "label": "qna"
+  },
+  {
+    "text": "What does the term 'glass ceiling' mean?",
+    "label": "qna"
+  },
+  {
+    "text": "How cold will it get tonight here?",
+    "label": "weather"
+  },
+  {
+    "text": "Remind me to water the garden next Wednesday evening",
+    "label": "reminder"
+  },
+  {
+    "text": "Will I see snow today?",
+    "label": "weather"
+  },
+  {
+    "text": "what's new",
+    "label": "qna"
+  },
+  {
+    "text": "What is the Pythagorean theorem?",
+    "label": "qna"
+  },
+  {
+    "text": "Is there any wind in Seattle today?",
+    "label": "weather"
+  },
+  {
+    "text": "How do you make a perfect cup of French press coffee?",
+    "label": "qna"
+  },
+  {
+    "text": "What's the forecast for next Saturday in Chicago?",
+    "label": "weather"
+  },
+  {
+    "text": "What\u2019s the weather like in Miami this weekend?",
+    "label": "weather"
+  },
+  {
+    "text": "How can I improve my public speaking confidence?",
+    "label": "qna"
+  },
+  {
+    "text": "Is there any chance of snow this week?",
+    "label": "weather"
+  },
+  {
+    "text": "Why did the Berlin Wall fall, historically speaking?",
+    "label": "qna"
+  },
+  {
+    "text": "Tell me who won the first Nobel Prize in Literature.",
+    "label": "qna"
+  },
+  {
+    "text": "Define the word 'serendipity' for me.",
+    "label": "qna"
+  },
+  {
+    "text": "Who invented the printing press?",
+    "label": "qna"
+  },
+  {
+    "text": "Tell me a joke about programmers.",
+    "label": "qna"
+  },
+  {
+    "text": "Is it going to rain this afternoon?",
+    "label": "weather"
+  },
+  {
+    "text": "What's the proper way to brew French press coffee?",
+    "label": "qna"
+  },
+  {
+    "text": "Give me a fun fact about octopuses.",
+    "label": "qna"
+  },
+  {
+    "text": "Create a reminder to take my medication at 8pm.",
+    "label": "reminder"
+  },
+  {
+    "text": "Explain why the sky appears blue during the day.",
+    "label": "qna"
+  },
+  {
+    "text": "Is it windy right now where I am?",
+    "label": "weather"
+  },
+  {
+    "text": "Remind me to call the vet when the cat is due for a checkup",
+    "label": "reminder"
+  },
+  {
+    "text": "How windy will it be this morning?",
+    "label": "weather"
+  },
+  {
+    "text": "Remind me to call the dentist tomorrow at 9\u202fam",
+    "label": "reminder"
+  },
+  {
+    "text": "Create a reminder to book the flight on March 12th",
+    "label": "reminder"
+  },
+  {
+    "text": "Add a task: book flight tickets next week",
+    "label": "reminder"
+  },
+  {
+    "text": "Set a reminder for the project deadline on the 15th of next month",
+    "label": "reminder"
+  },
+  {
+    "text": "Is there a chance of hail tomorrow?",
+    "label": "weather"
+  },
+  {
+    "text": "How windy will it get this evening?",
+    "label": "weather"
+  },
+  {
+    "text": "Tell me if it's going to rain this evening.",
+    "label": "weather"
+  },
+  {
+    "text": "Do you think climate change is reversible, and what would it take?",
+    "label": "qna"
+  },
+  {
+    "text": "Remind me every Friday to file my expense report.",
+    "label": "reminder"
+  },
+  {
+    "text": "How do you solve a quadratic equation with complex roots?",
+    "label": "qna"
+  },
+  {
+    "text": "What's the latest news on the space telescope launch?",
+    "label": "qna"
+  },
+  {
+    "text": "Remind me to take my medication every morning at 8am",
+    "label": "reminder"
+  },
+  {
+    "text": "What are the temperature highs for the next three days?",
+    "label": "weather"
+  },
+  {
+    "text": "Tell me a fun fact about octopuses.",
+    "label": "qna"
+  },
+  {
+    "text": "Tell me to pay the electric bill on the 15th.",
+    "label": "reminder"
+  },
+  {
+    "text": "Is it going to be cold tomorrow morning?",
+    "label": "weather"
+  },
+  {
+    "text": "What's the high temperature for today?",
+    "label": "weather"
+  },
+  {
+    "text": "Show me the current weather at my location.",
+    "label": "weather"
+  },
+  {
+    "text": "Is it raining right now?",
+    "label": "weather"
+  },
+  {
+    "text": "Remind me to call Mom tomorrow at 10am.",
+    "label": "reminder"
+  },
+  {
+    "text": "Give me a detailed weather report for Los Angeles.",
+    "label": "weather"
+  },
+  {
+    "text": "Remind me to take my dog for a walk every evening",
+    "label": "reminder"
+  },
+  {
+    "text": "Tell me to clean the garage this weekend",
+    "label": "reminder"
+  },
+  {
+    "text": "Add a task to finish the budget spreadsheet by Friday",
+    "label": "reminder"
+  },
+  {
+    "text": "Why do we get d\u00e9j\u00e0 vu sometimes?",
+    "label": "qna"
+  },
+  {
+    "text": "What's the weather today?",
+    "label": "weather"
+  },
+  {
+    "text": "Do I need a jacket this evening?",
+    "label": "weather"
+  },
+  {
+    "text": "What are the weather conditions in London right now?",
+    "label": "weather"
+  },
+  {
+    "text": "How's the temperature in Paris right now?",
+    "label": "weather"
+  },
+  {
+    "text": "good to see you",
+    "label": "qna"
+  },
+  {
+    "text": "Add a task: order the new laptop by next Monday",
+    "label": "reminder"
+  },
+  {
+    "text": "Can you check the rain probability for tomorrow?",
+    "label": "weather"
+  },
+  {
+    "text": "Will there be strong winds this morning?",
+    "label": "weather"
+  },
+  {
+    "text": "Create a reminder to book flight tickets next month.",
+    "label": "reminder"
+  },
+  {
+    "text": "Could you tell me the humidity level right now?",
+    "label": "weather"
+  },
+  {
+    "text": "Don't let me miss the dentist appointment at 2pm on Thursday",
+    "label": "reminder"
+  },
+  {
+    "text": "how are you doing today",
+    "label": "qna"
+  },
+  {
+    "text": "Remind me to send the email to the client next Friday afternoon",
+    "label": "reminder"
+  },
+  {
+    "text": "What\u2019s the current temperature in Tokyo?",
+    "label": "weather"
+  },
+  {
+    "text": "What are some effective strategies for managing stress?",
+    "label": "qna"
+  },
+  {
+    "text": "Is there a chance of thunderstorms later?",
+    "label": "weather"
+  },
+  {
+    "text": "Will it be sunny this weekend?",
+    "label": "weather"
+  },
+  {
+    "text": "What's the high temperature for tomorrow?",
+    "label": "weather"
+  },
+  {
+    "text": "Set a reminder for the team meeting at 2\u202fpm today",
+    "label": "reminder"
+  },
+  {
+    "text": "Please schedule a call with the client for next Wednesday at 11am",
+    "label": "reminder"
+  },
+  {
+    "text": "Can you tell me if it will be muggy today?",
+    "label": "weather"
+  },
+  {
+    "text": "How many bones are in the adult human body?",
+    "label": "qna"
+  },
+  {
+    "text": "Any thunderstorms expected tomorrow?",
+    "label": "weather"
+  },
+  {
+    "text": "Add a task to back up my laptop every Sunday",
+    "label": "reminder"
+  },
+  {
+    "text": "Set a reminder for picking up groceries in 45 minutes",
+    "label": "reminder"
+  },
+  {
+    "text": "Create a reminder to take out the trash every Tuesday night",
+    "label": "reminder"
+  },
+  {
+    "text": "Do I need an umbrella this weekend?",
+    "label": "weather"
+  },
+  {
+    "text": "Set a reminder to meditate at 7am daily",
+    "label": "reminder"
+  },
+  {
+    "text": "Give me a quick rundown of the causes of the French Revolution.",
+    "label": "qna"
+  },
+  {
+    "text": "Don't forget to check the car tire pressure in an hour",
+    "label": "reminder"
+  },
+  {
+    "text": "Set a reminder for the conference call in 45 minutes",
+    "label": "reminder"
+  },
+  {
+    "text": "Hey, any good movies from the 90s you recommend?",
+    "label": "qna"
+  },
+  {
+    "text": "Is it better to invest in stocks or real estate right now?",
+    "label": "qna"
+  },
+  {
+    "text": "Add a task to renew my car insurance before the end of the month",
+    "label": "reminder"
+  },
+  {
+    "text": "Set a reminder for the anniversary dinner on Friday",
+    "label": "reminder"
+  },
+  {
+    "text": "Add a task: finish the report by Friday",
+    "label": "reminder"
+  },
+  {
+    "text": "Remind me to call Mom tomorrow at 6\u202fpm",
+    "label": "reminder"
+  },
+  {
+    "text": "Remind me to water the plants",
+    "label": "reminder"
+  },
+  {
+    "text": "Set a reminder for the team meeting on Thursday at 2pm",
+    "label": "reminder"
+  },
+  {
+    "text": "Why do cats purr, actually?",
+    "label": "qna"
+  },
+  {
+    "text": "Will it snow in Denver tomorrow?",
+    "label": "weather"
+  },
+  {
+    "text": "Don't let me miss the webinar at 9am on Thursday",
+    "label": "reminder"
+  },
+  {
+    "text": "In 20 minutes, remind me to take the chicken out of the oven",
+    "label": "reminder"
+  },
+  {
+    "text": "Remind me to check my bank statement every month on the 1st",
+    "label": "reminder"
+  },
+  {
+    "text": "Give me a quick weather update for Paris.",
+    "label": "weather"
+  },
+  {
+    "text": "Give me a quick recipe for banana bread.",
+    "label": "qna"
+  },
+  {
+    "text": "sup",
+    "label": "qna"
+  },
+  {
+    "text": "hi there",
+    "label": "qna"
+  },
+  {
+    "text": "Is it going to snow in Boston next week?",
+    "label": "weather"
+  },
+  {
+    "text": "What's 17 times 23?",
+    "label": "qna"
+  },
+  {
+    "text": "Remind me to check the oven in 20 minutes",
+    "label": "reminder"
+  },
+  {
+    "text": "Remind me to call Alex in 20 minutes",
+    "label": "reminder"
+  },
+  {
+    "text": "Calculate the derivative of sin(x) multiplied by e^x.",
+    "label": "qna"
+  },
+  {
+    "text": "What's the wind speed outside?",
+    "label": "weather"
+  },
+  {
+    "text": "Set a reminder to take my medication at 9pm tonight",
+    "label": "reminder"
+  },
+  {
+    "text": "Schedule a reminder for my yoga class next Wednesday at 6pm.",
+    "label": "reminder"
+  },
+  {
+    "text": "What does it mean when someone says it's raining cats and dogs?",
+    "label": "qna"
+  },
+  {
+    "text": "Can you summarize the plot twist in the latest episode of *Stranger Things*?",
+    "label": "qna"
+  },
+  {
+    "text": "Tell me to buy groceries tomorrow morning",
+    "label": "reminder"
+  },
+  {
+    "text": "Do you think artificial intelligence will ever have emotions?",
+    "label": "qna"
+  },
+  {
+    "text": "How long does it take for a coffee bean to be roasted?",
+    "label": "qna"
+  },
+  {
+    "text": "Do you think AI will replace teachers in the future?",
+    "label": "qna"
+  },
+  {
+    "text": "How\u2019s the weather looking for the upcoming weekend?",
+    "label": "weather"
+  },
+  {
+    "text": "What\u2019s the wind speed in Chicago right now?",
+    "label": "weather"
+  },
+  {
+    "text": "Can you tell me the weather for Saturday in San Francisco?",
+    "label": "weather"
+  },
+  {
+    "text": "Do I need a coat this weekend?",
+    "label": "weather"
+  },
+  {
+    "text": "Remind me to water the plants every day at 8\u202fam",
+    "label": "reminder"
+  },
+  {
+    "text": "Is there snowfall expected in Boston this week?",
+    "label": "weather"
+  },
+  {
+    "text": "Add a task to submit the quarterly report by Friday",
+    "label": "reminder"
+  },
+  {
+    "text": "Add a task to water the plants every morning at 8am",
+    "label": "reminder"
+  },
+  {
+    "text": "What's a good recipe for a quick veggie stir\u2011fry?",
+    "label": "qna"
+  },
+  {
+    "text": "Explain how a blockchain works in layman's language.",
+    "label": "qna"
+  },
+  {
+    "text": "Don't forget to send birthday wishes to Alex on March 10th",
+    "label": "reminder"
+  },
+  {
+    "text": "Um, can you explain quantum entanglement in simple terms?",
+    "label": "qna"
+  },
+  {
+    "text": "Don't forget to wish Sarah happy birthday on March\u202f3rd",
+    "label": "reminder"
+  },
+  {
+    "text": "What's the temperature outside?",
+    "label": "weather"
+  },
+  {
+    "text": "Remind me to pay the electricity bill on the 15th",
+    "label": "reminder"
+  },
+  {
+    "text": "Remind me to wish John happy birthday on March 5th.",
+    "label": "reminder"
+  },
+  {
+    "text": "Explain the Pythagorean theorem in plain English.",
+    "label": "qna"
+  },
+  {
+    "text": "Set a reminder for the dentist appointment next Tuesday at 2pm",
+    "label": "reminder"
+  },
+  {
+    "text": "How do I change a flat tire?",
+    "label": "qna"
+  },
+  {
+    "text": "Make sure I don't miss the flight on June 12 at 9am",
+    "label": "reminder"
+  },
+  {
+    "text": "How will the weather be on Friday?",
+    "label": "weather"
+  },
+  {
+    "text": "Don't let me forget to submit the report by Friday noon",
+    "label": "reminder"
+  },
+  {
+    "text": "Do you think AI will replace teachers?",
+    "label": "qna"
+  },
+  {
+    "text": "Add a reminder: order the new laptop by the end of the month",
+    "label": "reminder"
+  },
+  {
+    "text": "hey buddy",
+    "label": "qna"
+  },
+  {
+    "text": "Can you give me advice on staying focused while studying?",
+    "label": "qna"
+  },
+  {
+    "text": "Who invented the first programmable computer?",
+    "label": "qna"
+  },
+  {
+    "text": "Set a reminder for my yoga class next Tuesday at 5pm",
+    "label": "reminder"
+  },
+  {
+    "text": "Is it going to be hot in Miami this weekend?",
+    "label": "weather"
+  },
+  {
+    "text": "What\u2019s the forecast for the weekend in Miami?",
+    "label": "weather"
+  },
+  {
+    "text": "Don't let me miss the webinar on Tuesday at 2pm.",
+    "label": "reminder"
+  },
+  {
+    "text": "Set a reminder to buy groceries tomorrow evening",
+    "label": "reminder"
+  },
+  {
+    "text": "Will there be any rain today in Seattle?",
+    "label": "weather"
+  },
+  {
+    "text": "Are there any thunderstorms expected today?",
+    "label": "weather"
+  },
+  {
+    "text": "Can you tell me if it'll rain in Miami tomorrow?",
+    "label": "weather"
+  },
+  {
+    "text": "What will the temperature be tomorrow in Seattle?",
+    "label": "weather"
+  },
+  {
+    "text": "Do you think it's a good idea to invest in index funds for a beginner?",
+    "label": "qna"
+  },
+  {
+    "text": "What's the formula for the area of a regular hexagon?",
+    "label": "qna"
+  },
+  {
+    "text": "Remind me to practice piano every evening at 6pm",
+    "label": "reminder"
+  },
+  {
+    "text": "Give me a quick tip for improving my public speaking.",
+    "label": "qna"
+  },
+  {
+    "text": "Add a task to buy groceries next Saturday morning.",
+    "label": "reminder"
+  },
+  {
+    "text": "Do we have any chance of rain this evening?",
+    "label": "weather"
+  },
+  {
+    "text": "Remind me to renew my gym membership in two weeks",
+    "label": "reminder"
+  },
+  {
+    "text": "How's the weather in London today?",
+    "label": "weather"
+  },
+  {
+    "text": "What\u2019s the probability of rolling a sum of 7 with two dice?",
+    "label": "qna"
+  },
+  {
+    "text": "Is it expected to be windy tomorrow?",
+    "label": "weather"
+  },
+  {
+    "text": "Tell me the weather for this afternoon.",
+    "label": "weather"
+  },
+  {
+    "text": "Remind me to pick up the dry cleaning tomorrow at 10am",
+    "label": "reminder"
+  },
+  {
+    "text": "Remind me to pay the electric bill on the 15th",
+    "label": "reminder"
+  },
+  {
+    "text": "Um, what's the difference between a comet and an asteroid?",
+    "label": "qna"
+  },
+  {
+    "text": "Why did the Berlin Wall fall?",
+    "label": "qna"
+  },
+  {
+    "text": "anything interesting happening",
+    "label": "qna"
+  },
+  {
+    "text": "What's the best way to train for a 5K run?",
+    "label": "qna"
+  },
+  {
+    "text": "How many prime numbers are there under 100?",
+    "label": "qna"
+  },
+  {
+    "text": "Add a reminder to book the flight for next month",
+    "label": "reminder"
+  },
+  {
+    "text": "Remind me to send the birthday card on April 3rd",
+    "label": "reminder"
+  },
+  {
+    "text": "Remind me to call the plumber as soon as possible",
+    "label": "reminder"
+  },
+  {
+    "text": "Give me a brief overview of the French Revolution.",
+    "label": "qna"
+  },
+  {
+    "text": "Are there any recent breakthroughs in renewable energy?",
+    "label": "qna"
+  },
+  {
+    "text": "What should I do if I get a flat tire on a bike?",
+    "label": "qna"
+  },
+  {
+    "text": "How does the internet actually work, in layman's terms?",
+    "label": "qna"
+  },
+  {
+    "text": "Give me the forecast for Los Angeles tomorrow.",
+    "label": "weather"
+  },
+  {
+    "text": "Remind me to call Mom in 30 minutes",
+    "label": "reminder"
+  },
+  {
+    "text": "Add a task: renew my car insurance next month",
+    "label": "reminder"
+  },
+  {
+    "text": "Remind me to stretch every hour",
+    "label": "reminder"
+  },
+  {
+    "text": "Remind me to buy groceries in 30 minutes",
+    "label": "reminder"
+  },
+  {
+    "text": "Do I need a coat today?",
+    "label": "weather"
+  },
+  {
+    "text": "Is it snowing in Denver?",
+    "label": "weather"
+  },
+  {
+    "text": "What's the forecast for the weekend in Los Angeles?",
+    "label": "weather"
+  },
+  {
+    "text": "Give me the weather for New York City.",
+    "label": "weather"
+  },
+  {
+    "text": "Will there be wind today?",
+    "label": "weather"
+  },
+  {
+    "text": "Could you tell me the historical significance of the Magna Carta?",
+    "label": "qna"
+  },
+  {
+    "text": "Can you set a reminder for the team meeting on Monday at 10am?",
+    "label": "reminder"
+  },
+  {
+    "text": "Could you provide the weather outlook for next Friday?",
+    "label": "weather"
+  },
+  {
+    "text": "Hey, what's the capital of Iceland?",
+    "label": "qna"
+  },
+  {
+    "text": "Why does the sky appear blue?",
+    "label": "qna"
+  },
+  {
+    "text": "Remind me to email the proposal by tomorrow morning",
+    "label": "reminder"
+  },
+  {
+    "text": "Don't let me forget to pay the electricity bill on the 5th",
+    "label": "reminder"
+  },
+  {
+    "text": "Give me a quick weather update for Los Angeles tomorrow.",
+    "label": "weather"
+  },
+  {
+    "text": "Will it be chilly in Chicago tomorrow morning?",
+    "label": "weather"
+  },
+  {
+    "text": "good evening, how are things",
+    "label": "qna"
+  },
+  {
+    "text": "What\u2019s the weather outlook for the next three days?",
+    "label": "weather"
+  },
+  {
+    "text": "What's the best way to learn basic conversational Spanish?",
+    "label": "qna"
+  },
+  {
+    "text": "Remind me to wish Dad happy birthday on July 4th",
+    "label": "reminder"
+  },
+  {
+    "text": "Will it rain tomorrow in Seattle?",
+    "label": "weather"
+  },
+  {
+    "text": "What are the main causes of climate change?",
+    "label": "qna"
+  },
+  {
+    "text": "Is it going to be hot this afternoon?",
+    "label": "weather"
+  },
+  {
+    "text": "Don't forget to wish Aunt Lisa happy birthday on July 12th",
+    "label": "reminder"
+  },
+  {
+    "text": "Tell me a fun fact about the Eiffel Tower.",
+    "label": "qna"
+  },
+  {
+    "text": "What are the health benefits of meditation?",
+    "label": "qna"
+  },
+  {
+    "text": "Will it rain in Seattle tomorrow?",
+    "label": "weather"
+  },
+  {
+    "text": "Will it be humid today?",
+    "label": "weather"
+  },
+  {
+    "text": "Can you tell me why the sky appears blue?",
+    "label": "qna"
+  },
+  {
+    "text": "good morning",
+    "label": "qna"
+  },
+  {
+    "text": "Is it freezing in Moscow right now?",
+    "label": "weather"
+  },
+  {
+    "text": "Give me the steps to change a flat tire on a car.",
+    "label": "qna"
+  },
+  {
+    "text": "Explain the significance of the Magna Carta in a sentence.",
+    "label": "qna"
+  },
+  {
+    "text": "How cold will it get tonight?",
+    "label": "weather"
+  },
+  {
+    "text": "What are the temperatures for the next three days?",
+    "label": "weather"
+  },
+  {
+    "text": "Provide the hourly forecast for tomorrow.",
+    "label": "weather"
+  },
+  {
+    "text": "Don't let me forget to submit the report by Friday",
+    "label": "reminder"
+  },
+  {
+    "text": "So, what's the story behind the phrase 'break the ice'?",
+    "label": "qna"
+  },
+  {
+    "text": "Create a task to review the budget report by next Monday",
+    "label": "reminder"
+  },
+  {
+    "text": "Can you check the chance of rain for the next 24 hours?",
+    "label": "weather"
+  },
+  {
+    "text": "What are the main causes of inflation?",
+    "label": "qna"
+  },
+  {
+    "text": "hello, how are you",
+    "label": "qna"
+  },
+  {
+    "text": "What does the term 'quantum entanglement' mean?",
+    "label": "qna"
+  },
+  {
+    "text": "Who won the Nobel Peace Prize in 2023?",
+    "label": "qna"
+  },
+  {
+    "text": "What are some effective ways to reduce stress at work?",
+    "label": "qna"
+  },
+  {
+    "text": "Give me the current wind speed.",
+    "label": "weather"
+  },
+  {
+    "text": "Will there be any thunderstorms today?",
+    "label": "weather"
+  },
+  {
+    "text": "What's the square root of 1,587?",
+    "label": "qna"
+  },
+  {
+    "text": "Create a reminder to pay the electricity bill next month",
+    "label": "reminder"
+  },
+  {
+    "text": "What are the main ingredients in a classic French onion soup?",
+    "label": "qna"
+  },
+  {
+    "text": "What are some effective strategies for managing stress at work?",
+    "label": "qna"
+  },
+  {
+    "text": "What's the weather in Tokyo for tomorrow?",
+    "label": "weather"
+  },
+  {
+    "text": "What are the main causes of inflation right now?",
+    "label": "qna"
+  },
+  {
+    "text": "Remind me to back up my laptop this weekend",
+    "label": "reminder"
+  },
+  {
+    "text": "What's the standard deviation formula again?",
+    "label": "qna"
+  },
+  {
+    "text": "What's the weather looking like for Saturday?",
+    "label": "weather"
+  },
+  {
+    "text": "What\u2019s the origin story behind the phrase 'break the ice'?",
+    "label": "qna"
+  },
+  {
+    "text": "Please remind me to file my taxes before April 15th",
+    "label": "reminder"
+  },
+  {
+    "text": "Is it chilly right now where I am?",
+    "label": "weather"
+  },
+  {
+    "text": "Is it true that bees can recognize human faces?",
+    "label": "qna"
+  },
+  {
+    "text": "Hey, who invented the first mechanical computer?",
+    "label": "qna"
+  },
+  {
+    "text": "Add a task to call the electrician on Friday afternoon",
+    "label": "reminder"
+  },
+  {
+    "text": "What are the conditions in my current location?",
+    "label": "weather"
+  },
+  {
+    "text": "Set a reminder for the project deadline next Friday",
+    "label": "reminder"
+  },
+  {
+    "text": "What's the most popular meme right now?",
+    "label": "qna"
+  },
+  {
+    "text": "hey, got a minute",
+    "label": "qna"
+  },
+  {
+    "text": "What's the probability of rolling a sum of 7 with two dice?",
+    "label": "qna"
+  },
+  {
+    "text": "What's the weather outlook for tomorrow in my area?",
+    "label": "weather"
+  },
+  {
+    "text": "Explain the difference between a hurricane and a tornado.",
+    "label": "qna"
+  },
+  {
+    "text": "yo",
+    "label": "qna"
+  },
+  {
+    "text": "Who were the major players in the Cuban Missile Crisis?",
+    "label": "qna"
+  },
+  {
+    "text": "How cold will it be this evening?",
+    "label": "weather"
+  },
+  {
+    "text": "Hey, um, how do you make a perfect scrambled egg?",
+    "label": "qna"
+  },
+  {
+    "text": "Remind me to call Mom tomorrow at 5pm",
+    "label": "reminder"
+  },
+  {
+    "text": "What\u2019s the chance of rain this evening?",
+    "label": "weather"
+  },
+  {
+    "text": "Do you think artificial intelligence will ever be truly conscious?",
+    "label": "qna"
+  },
+  {
+    "text": "Set an alarm for 7am every morning.",
+    "label": "reminder"
+  },
+  {
+    "text": "Define \"entropy\".",
+    "label": "qna"
+  },
+  {
+    "text": "Set a reminder for my yoga class at 6\u202fpm tonight",
+    "label": "reminder"
+  },
+  {
+    "text": "Will it be rainy later today?",
+    "label": "weather"
+  },
+  {
+    "text": "What are the main arguments for and against universal basic income?",
+    "label": "qna"
+  },
+  {
+    "text": "Do you think artificial intelligence will ever have consciousness?",
+    "label": "qna"
+  },
+  {
+    "text": "How hot will it be this afternoon?",
+    "label": "weather"
+  },
+  {
+    "text": "Don't let me miss the webinar on Wednesday at 11am",
+    "label": "reminder"
+  },
+  {
+    "text": "howdy",
+    "label": "qna"
+  },
+  {
+    "text": "Give me a quick recipe for a vegetarian stir\u2011fry.",
+    "label": "qna"
+  },
+  {
+    "text": "Do I need a coat tonight?",
+    "label": "weather"
+  },
+  {
+    "text": "Set a reminder to check the oven in 20 minutes",
+    "label": "reminder"
+  },
+  {
+    "text": "What\u2019s the expected snowfall for the weekend?",
+    "label": "weather"
+  },
+  {
+    "text": "Set a reminder for the grocery delivery on Friday evening",
+    "label": "reminder"
+  },
+  {
+    "text": "Tell me tomorrow's forecast.",
+    "label": "weather"
+  },
+  {
+    "text": "Add a task: renew car insurance next Thursday",
+    "label": "reminder"
+  },
+  {
+    "text": "Don't let me miss the webinar at 11\u202fam tomorrow",
+    "label": "reminder"
+  },
+  {
+    "text": "Can you list three famous works by Leonardo da Vinci?",
+    "label": "qna"
+  },
+  {
+    "text": "Will it be mild tomorrow?",
+    "label": "weather"
+  },
+  {
+    "text": "Add a task to water the plants in 30 minutes",
+    "label": "reminder"
+  },
+  {
+    "text": "Give me the weather update for my current location.",
+    "label": "weather"
+  },
+  {
+    "text": "Which countries use the Euro?",
+    "label": "qna"
+  },
+  {
+    "text": "Reminder: call the bank next Friday",
+    "label": "reminder"
+  },
+  {
+    "text": "What's the longest river in South America?",
+    "label": "qna"
+  },
+  {
+    "text": "Set a reminder for paying the electricity bill on the 15th",
+    "label": "reminder"
+  },
+  {
+    "text": "Remind me to stretch in 10 minutes.",
+    "label": "reminder"
+  },
+  {
+    "text": "Give me the forecast for Paris this weekend.",
+    "label": "weather"
+  },
+  {
+    "text": "hey what's up",
+    "label": "qna"
+  },
+  {
+    "text": "What are the key components of a good elevator pitch?",
+    "label": "qna"
+  },
+  {
+    "text": "Will there be thunderstorms in Dallas tomorrow?",
+    "label": "weather"
+  },
+  {
+    "text": "Will it rain this weekend?",
+    "label": "weather"
+  },
+  {
+    "text": "Who won the Nobel Peace Prize in 2023 and why?",
+    "label": "qna"
+  },
+  {
+    "text": "Set an alarm to start the oven in 20 minutes",
+    "label": "reminder"
+  },
+  {
+    "text": "Give me a brief weather update for the weekend.",
+    "label": "weather"
+  },
+  {
+    "text": "Is it going to snow in Denver next week?",
+    "label": "weather"
+  },
+  {
+    "text": "Add a task to water the plants every day at 8am",
+    "label": "reminder"
+  },
+  {
+    "text": "Give me the temperature for this afternoon.",
+    "label": "weather"
+  },
+  {
+    "text": "Tell me the forecast for the next three days in Paris.",
+    "label": "weather"
+  },
+  {
+    "text": "What's the weather like in my current location?",
+    "label": "weather"
+  },
+  {
+    "text": "Is it going to be windy later?",
+    "label": "weather"
+  },
+  {
+    "text": "Will the temperature drop tonight?",
+    "label": "weather"
+  },
+  {
+    "text": "Who won the Best Actor Oscar in 2022?",
+    "label": "qna"
+  },
+  {
+    "text": "Add a reminder: attend the conference on July 20th",
+    "label": "reminder"
+  },
+  {
+    "text": "Do you think AI will ever write truly original art?",
+    "label": "qna"
+  },
+  {
+    "text": "Who invented the printing press and when?",
+    "label": "qna"
+  },
+  {
+    "text": "Tell me who invented the telephone.",
+    "label": "qna"
+  },
+  {
+    "text": "How many moons does Jupiter have?",
+    "label": "qna"
+  },
+  {
+    "text": "Can you give me a brief biography of Ada Lovelace?",
+    "label": "qna"
+  },
+  {
+    "text": "I want a reminder to renew my passport on June 1st",
+    "label": "reminder"
+  },
+  {
+    "text": "Schedule a meeting with John for next Friday at 10am",
+    "label": "reminder"
+  },
+  {
+    "text": "Can you break down the plot of The Great Gatsby?",
+    "label": "qna"
+  },
+  {
+    "text": "Set a reminder for the webinar on Monday at 3pm",
+    "label": "reminder"
+  },
+  {
+    "text": "What does the term 'GDP' stand for?",
+    "label": "qna"
+  },
+  {
+    "text": "Explain the difference between a virus and a bacteria.",
+    "label": "qna"
+  },
+  {
+    "text": "Set a reminder for the team meeting tomorrow at 10am",
+    "label": "reminder"
+  },
+  {
+    "text": "Hey, what's the latest breakthrough in renewable energy?",
+    "label": "qna"
+  },
+  {
+    "text": "hey, can we chat",
+    "label": "qna"
+  },
+  {
+    "text": "Explain the significance of the Magna Carta.",
+    "label": "qna"
+  },
+  {
+    "text": "Is it going to be sunny this afternoon?",
+    "label": "weather"
+  },
+  {
+    "text": "How does photosynthesis actually work?",
+    "label": "qna"
+  },
+  {
+    "text": "Set a reminder for my medication at 8pm tonight",
+    "label": "reminder"
+  },
+  {
+    "text": "Add a reminder to renew my subscription on the first of next month",
+    "label": "reminder"
+  },
+  {
+    "text": "Do we have snow tonight?",
+    "label": "weather"
+  },
+  {
+    "text": "How's the forecast for this weekend?",
+    "label": "weather"
+  },
+  {
+    "text": "Hey, what's a good way to start learning basic coding?",
+    "label": "qna"
+  },
+  {
+    "text": "Explain why the sky appears blue.",
+    "label": "qna"
+  },
+  {
+    "text": "Hey, remind me to call the dentist next week",
+    "label": "reminder"
+  },
+  {
+    "text": "Do I need an umbrella today?",
+    "label": "weather"
+  },
+  {
+    "text": "How will the weather be on Sunday?",
+    "label": "weather"
+  },
+  {
+    "text": "How's the temperature right now?",
+    "label": "weather"
+  },
+  {
+    "text": "Is it going to snow this weekend in Denver?",
+    "label": "weather"
+  },
+  {
+    "text": "Is snow expected later this evening?",
+    "label": "weather"
+  },
+  {
+    "text": "Give me the forecast for New York tomorrow.",
+    "label": "weather"
+  },
+  {
+    "text": "Add a task to buy groceries at 6pm tonight",
+    "label": "reminder"
+  },
+  {
+    "text": "Add a task: pick up the kids from school at 3pm today",
+    "label": "reminder"
+  },
+  {
+    "text": "Give me the weather outlook for the next three days.",
+    "label": "weather"
+  },
+  {
+    "text": "How do I calculate the area of a circle?",
+    "label": "qna"
+  },
+  {
+    "text": "Will it be sunny this afternoon?",
+    "label": "weather"
+  },
+  {
+    "text": "Um, what's the definition of 'serendipity'?",
+    "label": "qna"
+  },
+  {
+    "text": "Remind me to email the client before the end of the day",
+    "label": "reminder"
+  },
+  {
+    "text": "Will there be snow this weekend in Denver?",
+    "label": "weather"
+  },
+  {
+    "text": "How hot is it in Miami right now?",
+    "label": "weather"
+  },
+  {
+    "text": "Hey, what's a good recipe for homemade pizza dough?",
+    "label": "qna"
+  },
+  {
+    "text": "Add a task: laundry on Saturday afternoon",
+    "label": "reminder"
+  },
+  {
+    "text": "How's the weather outside?",
+    "label": "weather"
+  },
+  {
+    "text": "Don't let me forget to pick up dry cleaning in 45 minutes",
+    "label": "reminder"
+  },
+  {
+    "text": "Should I learn Python or Java first for data science?",
+    "label": "qna"
+  },
+  {
+    "text": "Give me a quick rundown of the causes of World War I.",
+    "label": "qna"
+  },
+  {
+    "text": "What's the chance of rain today where I am?",
+    "label": "weather"
+  },
+  {
+    "text": "Who was the first woman to win a Nobel Prize?",
+    "label": "qna"
+  },
+  {
+    "text": "Set an alarm for 7am tomorrow",
+    "label": "reminder"
+  },
+  {
+    "text": "Set a reminder to email the client after the call",
+    "label": "reminder"
+  },
+  {
+    "text": "Is there any snow expected this week in Boston?",
+    "label": "weather"
+  },
+  {
+    "text": "How's the temperature right now in Seattle?",
+    "label": "weather"
+  },
+  {
+    "text": "Don't let me forget to schedule the dentist cleaning next Tuesday",
+    "label": "reminder"
+  },
+  {
+    "text": "Is it going to snow in Denver tomorrow?",
+    "label": "weather"
+  },
+  {
+    "text": "Don't let me forget to send the report by next Friday",
+    "label": "reminder"
+  },
+  {
+    "text": "Can you give me a weather update for Chicago?",
+    "label": "weather"
+  },
+  {
+    "text": "Remind me to take my medication at 7am daily",
+    "label": "reminder"
+  },
+  {
+    "text": "Why did the Berlin Wall fall in 1989?",
+    "label": "qna"
+  },
+  {
+    "text": "Explain the process of photosynthesis in under a minute.",
+    "label": "qna"
+  },
+  {
+    "text": "Provide the forecast for the coming Saturday.",
+    "label": "weather"
+  },
+  {
+    "text": "Remind me to take my medication at 7\u202fam daily",
+    "label": "reminder"
+  },
+  {
+    "text": "What does the word \"serendipity\" mean?",
+    "label": "qna"
+  },
+  {
+    "text": "Remind me to stretch in an hour",
+    "label": "reminder"
+  },
+  {
+    "text": "What does serendipity mean?",
+    "label": "qna"
+  },
+  {
+    "text": "Give me the weather summary for the upcoming weekend.",
+    "label": "weather"
+  },
+  {
+    "text": "Give me the weather update for my location.",
+    "label": "weather"
+  },
+  {
+    "text": "Could you provide the weather outlook for the next three days?",
+    "label": "weather"
+  },
+  {
+    "text": "Explain Schr\u00f6dinger's cat in simple terms.",
+    "label": "qna"
+  },
+  {
+    "text": "Remind me to call Mom tomorrow at 6pm",
+    "label": "reminder"
+  },
+  {
+    "text": "How cold will it be in Minneapolis this morning?",
+    "label": "weather"
+  },
+  {
+    "text": "Schedule a dentist appointment reminder for June 12 at 9am",
+    "label": "reminder"
+  },
+  {
+    "text": "How many bones are in the human body, anyway?",
+    "label": "qna"
+  },
+  {
+    "text": "Set a reminder to practice piano every evening at 5pm",
+    "label": "reminder"
+  },
+  {
+    "text": "Set a reminder for the dentist appointment on Thursday at 3pm.",
+    "label": "reminder"
+  },
+  {
+    "text": "What's the chance of snow in Boston tomorrow?",
+    "label": "weather"
+  },
+  {
+    "text": "Tell me to check the oven in 45 minutes",
+    "label": "reminder"
+  },
+  {
+    "text": "Schedule a reminder to take my medication at 9pm tonight",
+    "label": "reminder"
+  },
+  {
+    "text": "Is there a chance of thunderstorms this evening?",
+    "label": "weather"
+  },
+  {
+    "text": "What's the best way to learn a new language?",
+    "label": "qna"
+  },
+  {
+    "text": "What are the main differences between a comet and an asteroid?",
+    "label": "qna"
+  },
+  {
+    "text": "What\u2019s the precipitation probability for tomorrow?",
+    "label": "weather"
+  },
+  {
+    "text": "Schedule a reminder to pay the electricity bill on the 15th",
+    "label": "reminder"
+  },
+  {
+    "text": "Explain the concept of dark matter in simple terms.",
+    "label": "qna"
+  },
+  {
+    "text": "Will it rain tomorrow?",
+    "label": "weather"
+  },
+  {
+    "text": "Remind me to take a break in 45 minutes",
+    "label": "reminder"
+  },
+  {
+    "text": "Is it going to rain today?",
+    "label": "weather"
+  },
+  {
+    "text": "Don't let me miss the webinar at 9\u202fam on Saturday",
+    "label": "reminder"
+  },
+  {
+    "text": "Remind me to check the oven in 45 minutes",
+    "label": "reminder"
+  },
+  {
+    "text": "How windy will it be in Kansas City later?",
+    "label": "weather"
+  },
+  {
+    "text": "Will it snow tonight in Boston?",
+    "label": "weather"
+  },
+  {
+    "text": "Remind me to send the birthday card to Mom next week",
+    "label": "reminder"
+  },
+  {
+    "text": "Don't let me forget to water the plants in 30 minutes",
+    "label": "reminder"
+  },
+  {
+    "text": "Who won the Nobel Prize in Literature last year?",
+    "label": "qna"
+  },
+  {
+    "text": "Add a task to back up my laptop every Sunday night",
+    "label": "reminder"
+  },
+  {
+    "text": "How does blockchain technology work?",
+    "label": "qna"
+  },
+  {
+    "text": "How does blockchain technology work in layman's terms?",
+    "label": "qna"
+  },
+  {
+    "text": "Give me a quick definition of 'cryptocurrency'.",
+    "label": "qna"
+  },
+  {
+    "text": "Explain the process of photosynthesis in layman's terms.",
+    "label": "qna"
+  },
+  {
+    "text": "Add a reminder to check the oven in 20 minutes",
+    "label": "reminder"
+  },
+  {
+    "text": "What's the humidity like right now?",
+    "label": "weather"
+  },
+  {
+    "text": "Tell me a joke about computers.",
+    "label": "qna"
+  },
+  {
+    "text": "Remind me to buy groceries when I get home",
+    "label": "reminder"
+  },
+  {
+    "text": "Set a reminder for the conference call on Monday at 11am.",
+    "label": "reminder"
+  },
+  {
+    "text": "Add a task: refill the printer ink today.",
+    "label": "reminder"
+  },
+  {
+    "text": "Tell me to send the report by noon tomorrow",
+    "label": "reminder"
+  },
+  {
+    "text": "Remind me to email the client before the meeting tomorrow",
+    "label": "reminder"
+  },
+  {
+    "text": "Give me the recipe for classic beef stew.",
+    "label": "qna"
+  },
+  {
+    "text": "Set a recurring reminder to stretch at 3pm daily",
+    "label": "reminder"
+  },
+  {
+    "text": "Do you think AI will replace doctors in the future?",
+    "label": "qna"
+  },
+  {
+    "text": "What's the current stock price of Tesla?",
+    "label": "qna"
+  },
+  {
+    "text": "How's the weather in Tokyo right now?",
+    "label": "weather"
+  },
+  {
+    "text": "Please remind me to book the hotel for the conference next month",
+    "label": "reminder"
+  },
+  {
+    "text": "Will it be sunny today?",
+    "label": "weather"
+  },
+  {
+    "text": "What\u2019s the temperature forecast for tonight?",
+    "label": "weather"
+  },
+  {
+    "text": "What's the difference between a simile and a metaphor?",
+    "label": "qna"
+  },
+  {
+    "text": "What's the current wind speed where I am?",
+    "label": "weather"
+  },
+  {
+    "text": "Don't let me miss the sale on Saturday morning",
+    "label": "reminder"
+  },
+  {
+    "text": "Hey, can you explain quantum entanglement in simple terms?",
+    "label": "qna"
+  },
+  {
+    "text": "Add a reminder to stretch every hour while I work",
+    "label": "reminder"
+  },
+  {
+    "text": "Tell me to buy groceries when I leave work today",
+    "label": "reminder"
+  },
+  {
+    "text": "Remind me to practice piano at 6am tomorrow",
+    "label": "reminder"
+  },
+  {
+    "text": "Will the temperature exceed 80 degrees today?",
+    "label": "weather"
+  },
+  {
+    "text": "Explain the concept of supply and demand.",
+    "label": "qna"
+  },
+  {
+    "text": "What's the chance of rain this weekend?",
+    "label": "weather"
+  },
+  {
+    "text": "how's it going",
+    "label": "qna"
+  },
+  {
+    "text": "Add a task to renew my passport before June 1st",
+    "label": "reminder"
+  },
+  {
+    "text": "How hot will it be in Los Angeles right now?",
+    "label": "weather"
+  },
+  {
+    "text": "Um, can you explain why the sky is blue?",
+    "label": "qna"
+  },
+  {
+    "text": "Set a reminder for my dentist cleaning in two weeks",
+    "label": "reminder"
+  },
+  {
+    "text": "What's the high temperature for Saturday in Miami?",
+    "label": "weather"
+  },
+  {
+    "text": "What's the weather like today?",
+    "label": "weather"
+  },
+  {
+    "text": "Do I need sunglasses today?",
+    "label": "weather"
+  },
+  {
+    "text": "Add a task to send the project update next Friday morning",
+    "label": "reminder"
+  },
+  {
+    "text": "Tell me to backup my laptop this evening.",
+    "label": "reminder"
+  },
+  {
+    "text": "Is there any fog in San Francisco right now?",
+    "label": "weather"
+  },
+  {
+    "text": "Remind me to send the birthday card to Mom next Thursday.",
+    "label": "reminder"
+  },
+  {
+    "text": "Don't let me miss the webinar at 3pm tomorrow",
+    "label": "reminder"
+  },
+  {
+    "text": "How's the weather this weekend?",
+    "label": "weather"
+  },
+  {
+    "text": "What are the economic impacts of remote work trends?",
+    "label": "qna"
+  },
+  {
+    "text": "Tell me to pick up dry cleaning on Saturday",
+    "label": "reminder"
+  },
+  {
+    "text": "Remind me to schedule the annual check\u2011up in three months",
+    "label": "reminder"
+  },
+  {
+    "text": "Will there be thunderstorms this evening?",
+    "label": "weather"
+  },
+  {
+    "text": "Don't forget to water the garden next Tuesday morning",
+    "label": "reminder"
+  },
+  {
+    "text": "What's the population of Canada as of 2023?",
+    "label": "qna"
+  },
+  {
+    "text": "How many bones are there in an adult human body?",
+    "label": "qna"
+  },
+  {
+    "text": "Remind me to pick up the dry cleaning when I get home",
+    "label": "reminder"
+  },
+  {
+    "text": "Can you remind me to pick up the dry cleaning when I get home",
+    "label": "reminder"
+  },
+  {
+    "text": "Remind me in 45 minutes to check the oven.",
+    "label": "reminder"
+  },
+  {
+    "text": "Is it cold enough for a coat right now?",
+    "label": "weather"
+  },
+  {
+    "text": "Will the temperature drop below freezing tonight?",
+    "label": "weather"
+  },
+  {
+    "text": "How's the weather today at my location?",
+    "label": "weather"
+  },
+  {
+    "text": "How chilly will it get tonight?",
+    "label": "weather"
+  },
+  {
+    "text": "How did the internet become commercialized in the 1990s?",
+    "label": "qna"
+  },
+  {
+    "text": "Set a reminder for my yoga class tomorrow at 7am",
+    "label": "reminder"
+  },
+  {
+    "text": "Can you tell me why the sky looks blue?",
+    "label": "qna"
+  },
+  {
+    "text": "Set a reminder for my dentist appointment next Monday morning",
+    "label": "reminder"
+  },
+  {
+    "text": "What's the current weather at my location?",
+    "label": "weather"
+  }
+]
