@@ -270,11 +270,57 @@ Legend: `[ ]` not started · `[~]` in progress · `[x]` done
       both failed to extract a location because the regex only recognized
       in/for/at/near as location prepositions, missing the common "of"
       phrasing — added "of" to src/handlers/weather.py's _LOCATION_PATTERN.
-      STILL PENDING: user needs to re-run voice_pipeline_v4.py and confirm
-      (a) no more crackling, (b) no more segfault on exit, (c) barge-in
-      actually triggers when interrupting mid-speech, (d) whether the
-      no-AEC self-triggering risk (assistant's own voice picked up by the
-      mic) materializes in practice.
+      Second live test (user, VAD_DEBUG=1): crackling and segfault GONE
+      (duplex fix confirmed), but barge-in still never fired. The debug log
+      exposed two stacked bugs:
+        1. My trigger counted "3 consecutive VADIterator 'start' events", but
+           VADIterator emits ONE start at onset then None until 'end' — the
+           counter reset every chunk and could never reach 3. Barge-in could
+           not fire for any input. (Same bug in the first MicMonitor.)
+        2. The log showed {'start': ...} ~0.2s into EVERY playback before the
+           user spoke: the assistant's own voice leaking into the mic scores
+           VAD p~1.0 (confirmed again on hardware). So VAD alone can never
+           separate user from echo — the no-AEC risk was real, not theoretical.
+      Also found: after an interrupt the old player stopped the whole stream,
+      which stopped the mic, truncating the user's interrupting sentence.
+      REWRITE (src/vad/barge_in_engine.py, duplex_player.py, barge_in.py):
+        - BargeInEngine: raw per-chunk Silero probability + DoubleTalkDetector
+          (Geigel-style): compares mic RMS to the RMS of what is being played,
+          with the echo gain estimated online as a high quantile of recent
+          mic/playback ratios; triggers only when speech AND mic energy exceed
+          the echo ceiling by a margin for N consecutive chunks. Pure logic,
+          no audio I/O, so it is testable offline.
+        - Player keeps the duplex stream running after an interrupt (output
+          silenced immediately, mic keeps capturing until the user pauses).
+        - Worker thread can no longer wait forever after the stream closes;
+          pipeline exits via os._exit to skip a native teardown abort
+          ('recursive_mutex lock failed', likely the earlier segfault too).
+      TUNING METHOD (worth stating in the README): hand-tuning against one
+      metric at a time kept regressing. Instead recorded 5 real speaker->mic
+      echo takes on this Mac (scripts/record_echo_takes.py, played the way the
+      pipeline plays: a fresh stream per sentence), then grid-searched
+      detector configs offline against real echo + injected click transients +
+      simulated user voice at 3 loudness levels (scripts/tune_barge_in.py).
+      Measured on this machine: echo delay ~130ms, echo gain ~0.12-0.16, and
+      single-chunk 0.4-RMS clicks occur (a mean-smoother let one click trigger
+      it; switching to consecutive-chunk counting fixed that). Recordings that
+      were one continuous text needed 5 consecutive chunks; sentence-structured
+      recordings needed 7 — sentence boundaries matter.
+      Chosen defaults: margin 1.3, quantile 0.8, echo-lag window chunks 2-8,
+      7 consecutive chunks (~224ms). Offline: 0 false triggers on 5 real takes
+      + 5 with clicks; caught 25/30 simulated interruptions (user at ~1.5-4x
+      echo loudness), median delay ~360ms.
+      Live no-user validation (assistant speaking, nobody talking, this Mac):
+      first version 2/3 runs false-triggered; tuned version 1/10. NOT ZERO.
+      KNOWN LIMITATIONS (README): (a) ~10% chance per 10s message that the
+      assistant cuts itself off (echo/clicks), (b) a quiet user (<~1.5x echo
+      level) is not detected, (c) ~0.5s at message start is deaf while the
+      echo gain is estimated, (d) headphones remove echo entirely and should
+      make it reliable, (e) real fix = true AEC (e.g. WebRTC APM), out of scope
+      for a free/local pure-Python stack.
+      STILL PENDING: user live test of the rewritten pipeline (interrupt
+      mid-answer for qna/reminder/weather, rapid interrupts), ideally also
+      with headphones for comparison.
 
 ## Phase 8 — Latency Measurement
 - [x] Log per-stage latency (STT, classification, handler, LLM gen, TTS)

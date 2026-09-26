@@ -6,6 +6,7 @@ playback is stopped immediately) and the newly-captured utterance is routed
 next — no need to record it twice.
 """
 import concurrent.futures
+import os
 import sys
 import time
 from pathlib import Path
@@ -55,7 +56,7 @@ def speak_with_barge_in(message: str):
     return "done", None
 
 
-if __name__ == "__main__":
+def main():
     router = Router()
     print("Voice pipeline (Phase 7, barge-in enabled). Press Ctrl+C to exit.\n")
 
@@ -96,3 +97,14 @@ if __name__ == "__main__":
         if status == "interrupted":
             pending_audio = result
         print()
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except KeyboardInterrupt:
+        pass
+    # PortAudio/torch threads can abort during normal interpreter teardown
+    # (seen as a segfault / 'recursive_mutex lock failed'); skip it.
+    print("\nBye.", flush=True)
+    os._exit(0)
