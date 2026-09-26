@@ -380,6 +380,7 @@ was routed to Q&A.
         qna       326      20     1187        197        1730
         reminder  376      18        3        119         515
         weather   334      19     1546        103        2001
+      [Superseded by the idle-machine re-run below; kept for the record.]
       FINDING (contradicts the brief's assumption): reminder is ~3.4x faster
       than Q&A as expected, but weather is SLOWER than Q&A (2.0s vs 1.7s)
       because it makes two sequential network calls to Open-Meteo (geocode,
@@ -402,6 +403,21 @@ User's first Q&A answer took 18.4s vs 4.6s for the follow-up. Measured:
   measured on an uncontended machine. Re-measure Q&A/weather latency and
   record the demo only after the training job has finished, or numbers and
   the video will look artificially slow.
+
+### Final latency re-measurement (idle machine)
+User's training job finished (Ollama back to 27.9 tok/s, was 5.1; 27% memory
+free; preflight shows no competing job). logs/latency.jsonl cleared and the
+benchmark re-run, all 12 phrases routed correctly. Median ms, n=4 per intent:
+        intent    STT  classify  handler  TTS(1st sent)  total
+        qna       425      32     1733        231        2421
+        reminder  471      27        4        151         653
+        weather   401      26     1475        124        2025
+Slightly higher than the first run (1730/515/2001 totals), so ~+-30% is
+run-to-run noise at n=4. Robust result: reminder is ~4x faster than the
+other two (no LLM, no network). Not robust: weather vs Q&A ordering (weather
+was slower in run 1, slightly faster in run 2); both are ~2s. README table
+updated with these numbers and this caveat. Swap still read 89% after the
+job ended (macOS keeps swap allocated); generation speed was the real check.
 
 ### Streaming replies (LLM -> TTS), requested by user
 Fixes the README's "time-to-first-word grows with answer length" limitation.

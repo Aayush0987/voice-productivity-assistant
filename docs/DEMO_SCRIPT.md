@@ -85,5 +85,5 @@ actually happens rather than the ideal.
 
 - Trim to under ~2 minutes; export a GIF of Part 2 for the README.
 - Note the model/hardware in the caption: local Llama 3.1 8B, Whisper base.en, Piper, M4 Pro.
-- Re-run `python scripts/benchmark_latency.py` **with no training job running** and update the
-  latency table in the README.
+- The README latency table was re-measured on an idle machine (see PROGRESS.md); re-run
+  `python scripts/benchmark_latency.py` only if the hardware or models change.

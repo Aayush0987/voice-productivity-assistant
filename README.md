@@ -70,13 +70,15 @@ TTS sentence only (script: `scripts/benchmark_latency.py`, log: `logs/latency.js
 
 | Intent | STT | Classify | Handler | TTS (1st sentence) | Total |
 |---|---:|---:|---:|---:|---:|
-| Q&A | 326 | 20 | 1187 | 197 | **1730** |
-| Reminder | 376 | 18 | 3 | 119 | **515** |
-| Weather | 334 | 19 | 1546 | 103 | **2001** |
+| Q&A | 425 | 32 | 1733 | 231 | **2421** |
+| Reminder | 471 | 27 | 4 | 151 | **653** |
+| Weather | 401 | 26 | 1475 | 124 | **2025** |
 
-Reminders are fastest, as expected: no LLM, no network. **Weather is slower than Q&A**, which
-contradicts the assumption that skipping the LLM makes a path fast: it makes two sequential
-network calls (geocode, then forecast).
+Reminders are fastest, as expected: no LLM, no network (about 4 ms in the handler). **Weather is
+about as slow as Q&A**, which contradicts the assumption that skipping the LLM makes a path fast: it
+makes two sequential network calls (geocode, then forecast), roughly 1.5 s. In the first run weather
+was slower than Q&A; in this one it is slightly faster. The reminder-versus-the-rest gap is the
+robust result, the weather-versus-Q&A ordering is within noise.
 
 **Streaming the reply.** The table's Q&A row is for a short answer generated in full. For longer
 answers the pipeline now streams: the LLM's tokens are cut into sentences as they arrive and
@@ -87,10 +89,11 @@ now depends on the first sentence, not the whole answer.
 
 Caveats: excludes the fixed ~0.7 s end-of-speech wait and audio playback time; n=4 per intent;
 Q&A answers were short and the LLM is not streamed, so a longer answer takes proportionally
-longer before speech starts. **These were measured on an idle machine.** A concurrent GPU
-fine-tuning job cut Q&A generation to ~5 tokens/s and pushed swap to 90%, and a cold LLM start
-added ~6 s (now avoided by loading the model at startup). The table will be re-measured with the
-machine otherwise idle before the demo is recorded.
+longer before speech starts. **Measured with no other heavy job running** (Ollama at
+27.9 tokens/s, 27% memory free). An earlier run gave 1730 / 515 / 2001 ms totals, so treat roughly
+±30% as run-to-run noise at n=4. For contrast, a concurrent GPU fine-tuning job cut Q&A generation
+to ~5 tokens/s, and a cold LLM start added ~6 s (now avoided by loading the model at startup).
+The Q&A row is a short answer generated in full; the streamed pipeline starts speaking sooner (below).
 
 ## Barge-in
 
