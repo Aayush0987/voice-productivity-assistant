@@ -314,7 +314,7 @@ Legend: `[ ]` not started · `[~]` in progress · `[x]` done
       first version 2/3 runs false-triggered; tuned version 1/10. NOT ZERO.
       KNOWN LIMITATIONS (README): (a) ~10% chance per 10s message that the
       assistant cuts itself off (echo/clicks), (b) a quiet user (<~1.5x echo
-      level) is not detected, (c) ~0.5s at message start is deaf while the
+      level) is not detected, (c) ~0.8s at message start is deaf while the
       echo gain is estimated, (d) headphones remove echo entirely and should
       make it reliable, (e) real fix = true AEC (e.g. WebRTC APM), out of scope
       for a free/local pure-Python stack.
@@ -404,17 +404,34 @@ User's first Q&A answer took 18.4s vs 4.6s for the follow-up. Measured:
   the video will look artificially slow.
 
 ## Phase 9 — Full Integration Demo
-- [ ] Demo script covering all three intents
+- [x] Demo script covering all three intents
+      docs/DEMO_SCRIPT.md: pre-flight steps, Part 1 (intents + memory, 6
+      utterances with expected routes), Part 2 (barge-in scenarios A-D incl.
+      the brief's reminder-then-weather interruption), recording notes, and
+      what is/isn't verified live. scripts/demo_preflight.py checks Ollama,
+      model files, audio devices, Open-Meteo, competing GPU jobs and swap
+      pressure (it correctly flagged the user's running LoRA training and 90%
+      swap on its first run).
 - [ ] Barge-in demo (interrupt reminder confirmation to ask weather)
+      NOT recorded / NOT verified live. Blocked on the user's fine-tuning job
+      finishing (it throttles the LLM to ~5 tok/s) and on the user running
+      scenarios A and D.
 
 ## Phase 10 — Documentation
-- [ ] Architecture diagram
-- [ ] Classifier accuracy reported
-- [ ] Latency breakdown table
-- [ ] Barge-in demo (video/GIF)
-- [ ] Cost confirmation (all components $0)
-- [ ] Known limitations
-- [ ] Lessons learned
+- [x] Architecture diagram (mermaid in README.md, renders on GitHub)
+- [x] Classifier accuracy reported (100%, 102/102, with the optimistic-ceiling caveat)
+- [x] Latency breakdown table (from Phase 8; flagged as measured on an idle
+      machine, to be re-measured after the training job ends)
+- [ ] Barge-in demo (video/GIF) — not recorded yet
+- [x] Cost confirmation (all components $0, table in README)
+- [x] Known limitations
+- [x] Lessons learned
+      README.md written from measured results; unverified items are labelled.
+      DEVIATION FROM THE BRIEF, stated in the README: Pipecat was specified
+      for orchestration but is NOT used. The pipeline (turn-taking, duplex
+      stream, barge-in) is hand-written. requirements.txt previously listed
+      pipecat-ai and pydantic though neither is imported anywhere; replaced
+      with the packages actually used, pinned to the tested versions.
 
 ---
 
@@ -422,7 +439,7 @@ User's first Q&A answer took 18.4s vs 4.6s for the follow-up. Measured:
 - macOS 26.6.2, Apple Silicon (M4 Pro, 24GB unified memory)
 - Python 3.13.5, venv created at `venv/` (not committed)
 - Project dir: `/Users/aayush/VOICE AI AGENT`
-- Dependencies listed in `requirements.txt` (not yet installed — pending confirmation of exact package set as each phase starts, since some like `pipecat-ai`/`piper-tts` may need version pinning once we reach that phase)
+- Dependencies: `requirements.txt`, pinned to the installed versions (Pipecat was dropped, see Phase 10 note)
 
 ## Open Items / Blockers
-- Default location for weather (when none given in speech) — to be decided in Phase 2
+- (none open) Weather default location was resolved in Phase 2: ask each time.

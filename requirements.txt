@@ -1,34 +1,28 @@
-# Core ML / NLP
-torch
-transformers
-datasets
-scikit-learn
-accelerate
+# Pinned to the versions this project was built and tested with (Python 3.13, macOS, Apple Silicon)
 
-# STT
-faster-whisper
+# Intent classifier (DistilBERT fine-tune) and dataset tooling
+torch==2.14.0
+transformers==5.17.0
+datasets==5.0.1
+accelerate==1.15.0
+scikit-learn==1.9.1
+numpy==2.5.3
+scipy==1.18.1
 
-# VAD
-silero-vad
+# Synthetic training data (Groq free tier, no card; used only to generate data, never at inference)
+groq==1.7.0
+python-dotenv==1.2.3
 
-# Orchestration
-pipecat-ai
+# Speech: STT, VAD, TTS, audio I/O
+faster-whisper==1.2.1
+silero-vad==6.2.1
+piper-tts==1.8.0
+sounddevice==0.5.6
+soundfile==0.14.0
 
-# TTS
-piper-tts
+# Handlers
+requests==2.34.2
+dateparser==1.4.3
 
-# Synthetic data generation (free tier, no card)
-groq
-
-# Weather / HTTP
-requests
-
-# Structured extraction
-dateparser
-
-# Storage
-# sqlite3 is stdlib, no install needed
-
-# Utils
-python-dotenv
-pydantic
+# Not a pip package: Ollama (https://ollama.com) serving llama3.1:8b locally.
+# Piper voice: python -m piper.download_voices --download-dir models/tts en_US-lessac-medium
