@@ -234,7 +234,7 @@ Legend: `[ ]` not started · `[~]` in progress · `[x]` done
       run concurrently without device conflicts. This does NOT validate real
       barge-in accuracy or the AEC/self-triggering risk — that requires a
       human actually interrupting live playback.
-- [~] Test edge cases (mid-reminder-confirmation, mid-weather-report, rapid interrupts)
+- [~] Test edge cases (mid-reminder-confirmation, mid-weather-report, rapid interrupts) — qna verified, others pending
       First live test by user surfaced a serious problem: audible crackling
       during playback ("something is breaking" after each word) and a hard
       SEGFAULT on shutdown (`zsh: segmentation fault`) after Ctrl+C. No actual
@@ -318,9 +318,24 @@ Legend: `[ ]` not started · `[~]` in progress · `[x]` done
       echo gain is estimated, (d) headphones remove echo entirely and should
       make it reliable, (e) real fix = true AEC (e.g. WebRTC APM), out of scope
       for a free/local pure-Python stack.
-      STILL PENDING: user live test of the rewritten pipeline (interrupt
-      mid-answer for qna/reminder/weather, rapid interrupts), ideally also
-      with headphones for comparison.
+      Third live test (user, real interruption, speakers): BARGE-IN WORKS.
+        - Interrupt while thinking (qna): "How is a rainbow made?" was cut off
+          by the next question; the discarded answer was never spoken.
+        - Interrupt mid-speech (qna): assistant was reading a 3-sentence
+          rainbow answer; user talked over it, trigger fired at ratio 0.97 vs
+          echo ceiling 0.24 (~4x), playback stopped, and the full interrupting
+          sentence ("Can you tell that in short?") was captured intact and
+          routed. Ctrl+C exited cleanly ("Bye.", no segfault).
+        - Cosmetic: a joblib 'leaked semaphore' warning prints at exit because
+          os._exit skips cleanup; harmless.
+      Exposed the missing conversational memory: "Can you tell that in short?"
+      got "What do you need to know?" (no context) — addressed next.
+      Observed latency: a 3-sentence Q&A answer took 13.5s to generate
+      (non-streaming LLM) vs ~3-5s for short ones -> stream tokens to TTS is
+      the obvious improvement (README).
+      NOT YET TESTED live: reminder-confirmation interrupt -> weather question
+      (the Phase 9 demo scenario), weather-report interrupt, rapid successive
+      interrupts, headphones.
 
 ## Phase 8 — Latency Measurement
 - [x] Log per-stage latency (STT, classification, handler, LLM gen, TTS)
